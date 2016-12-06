@@ -1,0 +1,98 @@
+html
+	head
+		include includes/header.pug
+	body
+		div.container
+			h2 Admin portal
+			h5= message
+
+			p 
+				| Here you can view admins, edit your own information, or add a new admin.
+			h5 Change your e-mail address (laten uitklappen?)
+			div.row
+				form.col.s12(action='/adm-changeemail' method='post')
+					div.row
+						div.input-field.col.l5.m5.s12
+							input#email.validate(name='email' type='text' required)
+								//- nog naar email type wijzigen voor validation
+							label(for='email') Old e-mail
+						div.input-field.col.l5.m5.s12
+							input#newemail.validate(name='newemail' type='text' required)
+							label(for='newemail') New e-mail
+						div.input-field.col.l2.m2.s12
+							input#submit.btn.waves-effect(type='submit' value='Change e-mail')
+
+			h5 Change your password (laten uitklappen?)
+			div.row
+				form.col.s12(action='/adm-changepassword' method='post')
+					div.row
+						div.input-field.col.l3.m3.s12
+							input#oldpassword.validate(name='oldpassword' type='password' required)
+								//- nog naar email type wijzigen voor validation
+							label(for='oldpassword') Old password
+						div.input-field.col.l3.m3.s12
+							input#newpassword.validate(name='newpassword' type='password' required)
+							label(for='newpassword') New password
+						div.input-field.col.l4.m4.s12
+							input#newpassword2.validate(name='newpassword2' type='password' required)
+							label(for='newpassword2') Confirm new password
+						div.input-field.col.l2.m2.s12
+							input#submit.btn.waves-effect(type='submit' value='Change password')
+
+
+
+			h5 Add an admin (laten uitklappen?)
+			div.row
+				form.col.s12(action='/adm-addadmin' method='post')
+					div.row
+						div.input-field.col.l4.m4.s12
+							input#email.validate(name='email' type='text' required)
+								//- nog naar email type wijzigen voor validation
+							label(for='email') E-mail address
+						div.input-field.col.l3.m3.s12
+							input#password.validate(name='password' type='password' required)
+							label(for='password') Password
+						div.input-field.col.l3.m3.s12
+							input#password2.validate(name='password2' type='password' required)
+							label(for='password') Confirm password
+						div.input-field.col.l2.m2.s12
+							input#submit.btn.waves-effect(type='submit' value='Add admin')
+
+
+
+
+			h4 Dit nog in een navbar ofzo? Of juist footer
+			div.row
+				div(class='col s12')
+					p
+						strong A R T
+					ul
+						li
+							a(href='adm-addart') Add a new work of art
+						li
+							a(href='adm-listart') View/edit an existing work of art
+					p
+						strong A N I M A L
+					ul
+						li
+							a(href='adm-addanimal') Add a new animal
+						li
+							a(href='adm-listanimal') View/edit an existing animal
+					p
+						strong A D M I N
+					ul
+						li
+							a(href='adm-addadmin') View all admins
+						li
+							a(href='adm-addadmin') Change your admin details 
+						li
+							a(href='adm-addadmin') Add a new admin
+						
+
+						
+
+
+
+
+		main
+		include includes/footer.pug

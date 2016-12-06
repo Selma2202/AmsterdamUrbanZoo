@@ -2,11 +2,62 @@ html
 	head
 		include includes/header.pug
 	body
-		
-		div
-			div.row
-				div(class='col s12')
-					p  Admin texttttt
+		div.container
+			h2 Admin portal
+			h5= message
+			if currentUser === undefined
+				p 
+					| Are you an admin? Here you can sign in to the admin portal. 
+					br
+					| If you are not an admin, you can return to the Urban Zoo.
+				div.row
+					form.col.s12(action='/admin' method='post')
+						div.row
+							div.input-field.col.l4.m4.s12
+								input#email.validate(name='email' type='text' required)
+									//- nog naar email type wijzigen voor validation
+								label(for='email') Admin's e-mail address
+							div.input-field.col.l4.m4.s12
+								input#password.validate(name='password' type='password' required)
+								label(for='password') Admin's password
+							div.input-field.col.l4.m4.s12
+								input#submit.btn.waves-effect(type='submit' value='Login')
+
+
+
+
+			else
+				div.row
+					div(class='col s12')
+						p
+							strong A R T
+						ul
+							li
+								a(href='adm-addart') Add a new work of art
+							li
+								a(href='adm-listart') View/edit an existing work of art
+						p
+							strong A N I M A L
+						ul
+							li
+								a(href='adm-addanimal') Add a new animal
+							li
+								a(href='adm-listanimal') View/edit an existing animal
+						p
+							strong A D M I N
+						ul
+							li
+								a(href='adm-addadmin') View all admins
+							li
+								a(href='adm-addadmin') Change your admin details 
+							li
+								a(href='adm-addadmin') Add a new admin
+						
+
+						
+
+
+
 
 		main
 		include includes/footer.pug

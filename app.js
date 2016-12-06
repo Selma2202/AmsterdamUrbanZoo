@@ -31,10 +31,11 @@ let db = require ( __dirname + '/modules/database')
 
 // require routes
 let admin = require ( __dirname + '/routes/admin')
+let addAdmin = require ( __dirname + '/routes/adm-addadmin')
 
 // use
 app.use ( '/', admin)
-
+app.use ( '/', addAdmin)
 
 //// For debugging purposes
 app.get ('/ping', (req, res) => {
