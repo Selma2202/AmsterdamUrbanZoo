@@ -1,0 +1,89 @@
+html
+	head
+		include includes/header.pug
+	body
+		div.container
+			h2 Add animal
+			h5= message
+			
+			p put form here to add animal. make it work. 
+
+			h5 Add an animal
+			div.row
+				form.col.s12(action='/adm-addanimal' method='post')
+					div.row
+						div.input-field.col.s12
+							input#name.validate(name='name' type='text' required)
+							label(for='name') Name of animal (Dutch)
+						div.input-field.col.s12
+							input#description.validate(name='description' type='text' required)
+							label(for='description') Description of animal (Dutch)
+						div.input-field.col.s12
+							input#latinname.validate(name='latinname' type='text' required)
+							label(for='latinname') Latin name of animal (Latin duhhh)
+						div.input-field.col.s12
+							input#family.validate(name='family' type='text' required)
+							label(for='family') Family of animal (Dutch)
+								//- nog dropdown? zijn er niet zo veel toch?
+						div.input-field.col.s12
+							input#class.validate(name='class' type='text' required)
+							label(for='class') Class of animal (Dutch)
+								//- nog dropdown? zijn er niet zo veel toch?
+						div.input-field.col.s12
+							input#size.validate(name='size' type='text' required)
+							label(for='size') Size of animal + measure of length (Dutch)
+						div.input-field.col.s12
+							input#weight.validate(name='weight' type='text' required)
+							label(for='weight') Weight of animal + measure of weight (Dutch)
+						div.input-field.col.s12
+							input#rangecontinent.validate(name='rangecontinent' type='text' required)
+							label(for='rangecontinent') Continents the animal occurs (Dutch)
+								//- nog checkboxes? kan namelijk meerdere zijn
+						div.input-field.col.s12
+							input#rangecountry.validate(name='rangecountry' type='text' required)
+							label(for='rangecountry') Countries the animal occurs (Dutch)
+								//- nog checkboxes? kan namelijk meerdere zijn. maar wel heel veel dan.
+						div.input-field.col.l2.m2.s12
+							input#submit.btn.waves-effect(type='submit' value='Add animal')
+
+
+
+
+			div.row
+				div(class='col s12')
+					p
+						strong A R T
+					ul
+						li
+							a(href='adm-addart') Add a new work of art
+						li
+							a(href='adm-listart') View/edit an existing work of art
+					p
+						strong A N I M A L
+					ul
+						li
+							a(href='adm-addanimal') Add a new animal
+						li
+							a(href='adm-listanimal') View/edit an existing animal
+					p
+						strong A D M I N
+					ul
+						li
+							a(href='adm-addadmin') View all admins
+						li
+							a(href='adm-addadmin') Change your admin details 
+						li
+							a(href='adm-addadmin') Add a new admin
+					p
+						strong 
+							a(href='logout') L O G O U T
+
+						
+
+						
+
+
+
+
+		main
+		include includes/footer.pug

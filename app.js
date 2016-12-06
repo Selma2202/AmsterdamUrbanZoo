@@ -31,12 +31,20 @@ let db = require ( __dirname + '/modules/database')
 
 // require routes
 let admin = require ( __dirname + '/routes/admin')
+let addArt = require ( __dirname + '/routes/adm-addart')
+// let listArt = require ( __dirname + '/routes/adm-listart')
+let addAnimal = require ( __dirname + '/routes/adm-addanimal')
+// let listAnimal = require ( __dirname + '/routes/adm-listanimal')
 let addAdmin = require ( __dirname + '/routes/adm-addadmin')
 
 let logout = require ( __dirname + '/routes/logout')
 
 // use
 app.use ( '/', admin)
+app.use ( '/', addArt)
+// app.use ( '/', listArt)
+app.use ( '/', addAnimal)
+// app.use ( '/', listAnimal)
 app.use ( '/', addAdmin)
 
 app.use ( '/', logout)
