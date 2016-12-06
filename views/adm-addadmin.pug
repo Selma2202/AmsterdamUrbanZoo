@@ -39,6 +39,22 @@ html
 						div.input-field.col.l2.m2.s12
 							input#submit.btn.waves-effect(type='submit' value='Change password')
 
+			h5 View al admins (laten uitklappen?)
+			div.row
+				form.col.s12(action='/adm-addadmin' method='post')
+					div.row
+						div.input-field.col.l4.m4.s12
+							input#email.validate(name='email' type='text' required)
+								//- nog naar email type wijzigen voor validation
+							label(for='email') E-mail address
+						div.input-field.col.l3.m3.s12
+							input#password.validate(name='password' type='password' required)
+							label(for='password') Password
+						div.input-field.col.l3.m3.s12
+							input#password2.validate(name='password2' type='password' required)
+							label(for='password') Confirm password
+						div.input-field.col.l2.m2.s12
+							input#submit.btn.waves-effect(type='submit' value='Add admin')
 
 
 			h5 Add an admin (laten uitklappen?)
