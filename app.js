@@ -8,6 +8,7 @@ const express = require ('express')
 const bodyParser = require('body-parser')
 const bcrypt = require ('bcrypt-nodejs')
 const session = require('express-session');
+const pg = require ('pg')
 
 //initialize app
 const app = express ( )
@@ -26,13 +27,13 @@ app.set ('views', __dirname + '/views')
 
 //// routes and modules
 // require modules
-let database = require ( __dirname + '/modules/database')
+let db = require ( __dirname + '/modules/database')
 
 // require routes
-let routestructure = require ( __dirname + '/routes/routestructure')
+let admin = require ( __dirname + '/routes/admin')
 
 // use
-app.use ( '/', routestructure)
+app.use ( '/', admin)
 
 
 //// For debugging purposes
