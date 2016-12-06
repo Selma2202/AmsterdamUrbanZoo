@@ -33,9 +33,14 @@ let db = require ( __dirname + '/modules/database')
 let admin = require ( __dirname + '/routes/admin')
 let addAdmin = require ( __dirname + '/routes/adm-addadmin')
 
+let logout = require ( __dirname + '/routes/logout')
+
 // use
 app.use ( '/', admin)
 app.use ( '/', addAdmin)
+
+app.use ( '/', logout)
+
 
 //// For debugging purposes
 app.get ('/ping', (req, res) => {
