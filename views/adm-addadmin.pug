@@ -6,8 +6,13 @@ html
 			h2 Admin portal
 			h5= message
 
-			p 
-				| Here you can view admins, edit your own information, or add a new admin.
+			h5 View all admins (laten uitklappen?)
+			div.row
+				div.col.s12
+					h5 You are running this platform with:
+					each admin in allAdmins
+						p #{admin.email}
+
 			h5 Change your e-mail address (laten uitklappen?)
 			div.row
 				form.col.s12(action='/adm-changeemail' method='post')
@@ -38,23 +43,6 @@ html
 							label(for='newpassword2') Confirm new password
 						div.input-field.col.l2.m2.s12
 							input#submit.btn.waves-effect(type='submit' value='Change password')
-
-			h5 View al admins (laten uitklappen?)
-			div.row
-				form.col.s12(action='/adm-addadmin' method='post')
-					div.row
-						div.input-field.col.l4.m4.s12
-							input#email.validate(name='email' type='text' required)
-								//- nog naar email type wijzigen voor validation
-							label(for='email') E-mail address
-						div.input-field.col.l3.m3.s12
-							input#password.validate(name='password' type='password' required)
-							label(for='password') Password
-						div.input-field.col.l3.m3.s12
-							input#password2.validate(name='password2' type='password' required)
-							label(for='password') Confirm password
-						div.input-field.col.l2.m2.s12
-							input#submit.btn.waves-effect(type='submit' value='Add admin')
 
 
 			h5 Add an admin (laten uitklappen?)

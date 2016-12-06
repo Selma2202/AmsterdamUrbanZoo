@@ -20,8 +20,11 @@ router.get('/adm-addadmin', function (req, res) {
 	if (user === undefined) {
 		res.redirect('admin?message=' + encodeURIComponent('You are currently not logged in as an admin.'))
 	} else {
-		console.log('Add admin page is now showing in the browser')
-		res.render('adm-addadmin', {message: message, currentUser: user})
+		db.Admin.findAll({
+		}).then( (admins) => {
+			console.log('Add admin page is now showing in the browser')
+			res.render('adm-addadmin', {message: message, currentUser: user, allAdmins: admins})
+		})
 	}
 });
 
