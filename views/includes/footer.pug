@@ -1,8 +1,42 @@
 footer.page-footer
 	div.container
 		div.row
-			div.col-l6-s12
-				h5.white-text Basic materialize footer
+			if currentUser !== undefined
+				div.col.l3.m3.s12
+					p
+						strong.white-text A R T
+					ul
+						li
+							a(href='adm-addart') Add a new work of art
+						li
+							a(href='adm-listart') View/edit an existing work of art
+				div.col.l3.m3.s12
+					p
+						strong.white-text A N I M A L
+					ul
+						li
+							a(href='adm-addanimal') Add a new animal
+						li
+							a(href='adm-listanimal') View/edit an existing animal
+				div.col.l3.m3.s12
+					p
+						strong.white-text A D M I N
+					ul
+						li
+							a(href='adm-addadmin') View all admins
+						li
+							a(href='adm-addadmin') Change your admin details 
+						li
+							a(href='adm-addadmin') Add a new admin
+				div.col.l3.m3.s12
+					p
+						strong.white-text O T H E R
+					ul
+						li
+							a(href='index') Home
+						li
+							a(href='logout') Logout
+			else
 	div.footer-copyright
 		div.container.white-text 2016 Made with the Materialize Framework
 script( src="javascript/jquery-3.1.1.min.js" type="text/javascript" rel="javascript" )

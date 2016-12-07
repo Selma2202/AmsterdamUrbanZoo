@@ -1,0 +1,30 @@
+html
+	head
+		include includes/header.pug
+	body
+		div.container
+			if (currentAnimal === null)
+				h2 Bad admin!!
+				p 
+					| Admin, you are trying to edit an animal without providing an ID. Go back to 
+					a(href='adm-listanimal') all animals  
+					| to select a specific animal.
+
+				h5 We're not really sorry about this, because you're the admin, and you are supposed to know this kind of stuff! 
+				p 
+					| You could very well say we're 
+					em disappointed 
+					|in you.
+
+			else
+				h2 Edit animal
+				h5= message
+		
+				p put form here to edit animal. make it work. 
+				p You clicked on the animal: 
+					strong #{currentAnimal.name}
+
+
+
+		main
+		include includes/footer.pug

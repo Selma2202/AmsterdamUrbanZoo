@@ -18,6 +18,7 @@ html
 						div.input-field.col.s12
 							input#description.validate(name='description' type='text' required)
 							label(for='description') Description of animal (Dutch)
+								//-check hoe enters e.d. doorkomen?
 						div.input-field.col.s12
 							input#latinname.validate(name='latinname' type='text' required)
 							label(for='latinname') Latin name of animal (Latin duhhh)
@@ -36,9 +37,21 @@ html
 							input#weight.validate(name='weight' type='text' required)
 							label(for='weight') Weight of animal + measure of weight (Dutch)
 						div.input-field.col.s12
-							input#rangecontinent.validate(name='rangecontinent' type='text' required)
-							label(for='rangecontinent') Continents the animal occurs (Dutch)
-								//- nog checkboxes? kan namelijk meerdere zijn
+							select#rangecontinent.validate(name='rangecontinent' multiple='')
+								option(value='', disabled='', selected='') Continents the animal occurs 
+								option(value='Afrika') Afrika
+								option(value='Antarctica') Antarctica
+								option(value='Azië') Azië
+								option(value='Europa') Europa
+								option(value='Noord-Amerika') Noord-Amerika
+								option(value='Oceanië') Oceanië
+								option(value='Zuid-Amerika') Zuid-Amerika
+							label(for='rangecontinent') Continents the animal occurs
+
+						//- div.input-field.col.s12
+						//- 	input#rangecontinent.validate(name='rangecontinent' type='text' required)
+						//- 	label(for='rangecontinent') Continents the animal occurs (Dutch)
+						//- 		//- nog checkboxes? kan namelijk meerdere zijn
 						div.input-field.col.s12
 							input#rangecountry.validate(name='rangecountry' type='text' required)
 							label(for='rangecountry') Countries the animal occurs (Dutch)
@@ -48,39 +61,7 @@ html
 
 
 
-
-			div.row
-				div(class='col s12')
-					p
-						strong A R T
-					ul
-						li
-							a(href='adm-addart') Add a new work of art
-						li
-							a(href='adm-listart') View/edit an existing work of art
-					p
-						strong A N I M A L
-					ul
-						li
-							a(href='adm-addanimal') Add a new animal
-						li
-							a(href='adm-listanimal') View/edit an existing animal
-					p
-						strong A D M I N
-					ul
-						li
-							a(href='adm-addadmin') View all admins
-						li
-							a(href='adm-addadmin') Change your admin details 
-						li
-							a(href='adm-addadmin') Add a new admin
-					p
-						strong 
-							a(href='logout') L O G O U T
-
-						
-
-						
+				
 
 
 

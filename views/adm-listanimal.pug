@@ -1,0 +1,61 @@
+html
+	head
+		include includes/header.pug
+	body
+		div.container
+			h2 List of animals
+			h5= message
+			
+			p put list here of all animals. make it deletable/editable. 
+
+		table.striped.highlight.responsive-table
+			thead
+				tr
+					th(data-field='id') ID
+					th(data-field='name') Name
+					th(data-field='description') Description
+					th(data-field='latinName') Latin name
+					th(data-field='family') Family
+					th(data-field='class') Class
+					th(data-field='size') Size
+					th(data-field='weight') Weight
+					th(data-field='rangeContinent') Continents
+					th(data-field='rangeCountry') Countries
+					th(data-field='artId') Related art
+					//- th(data-field='createdat') CreatedAt
+					th(data-field='updatedat') Last updated
+					th(data-field='delete') Delete
+			tbody
+				each animal in allAnimals
+					tr
+						td #{animal.id}
+						td 
+							a(href='adm-editanimal?id=' + animal.id) #{animal.name}
+						td #{animal.description}
+						td #{animal.latinName}
+						td #{animal.family}
+						td #{animal.class}
+						td #{animal.size}
+						td #{animal.weight}
+						td #{animal.rangeContinent}
+						td #{animal.rangeCountry}
+						td #{animal.artId}
+						//- td #{animal.createdAt}
+						td #{animal.updatedAt}
+						td 
+							form(action=('/deleteanimal?id=' + animal.id) method='post' autocomplete='off')
+								input(type='submit' value='Delete' id='deleteanimal')
+
+
+
+			
+
+
+
+				
+
+
+
+
+		main
+		include includes/footer.pug

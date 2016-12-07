@@ -26,5 +26,26 @@ router.get('/adm-addanimal', function (req, res) {
 	}
 });
 
+router.post('/adm-addanimal', function (req, res) {
+	console.log(req.body.name)
+	db.Animal.create({
+		name: req.body.name,
+		description: req.body.description,
+		latinName: req.body.latinname,
+		family: req.body.family,
+		class: req.body.class,
+		size: req.body.size,
+		weight: req.body.weight,
+		rangeContinent: req.body.rangecontinent,
+		rangeCountry: req.body.rangecountry
+	}).then(function () {
+		db.conn.sync().then( () => {
+			console.log('animal added')
+			res.redirect('/adm-addanimal?message=' + encodeURIComponent("The animal has been added."))
+		})
+	})
+})
+
+
 //// Export
 module.exports = router
