@@ -42,7 +42,7 @@ router.post('/deleteanimal', (req, res) => {
 		}
 	}).then(function () {
 		console.log('Animal deleted')
-		res.redirect('/adm-listanimal?message=' + encodeURIComponent("The goal has been deleted."))
+		res.redirect('/adm-listanimal?message=' + encodeURIComponent("The animal has been deleted."))
 	})	 
 })
 

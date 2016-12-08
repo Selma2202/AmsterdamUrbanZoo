@@ -1,0 +1,60 @@
+html
+	head
+		include includes/header.pug
+	body
+		div.container
+			h2 List of artworks
+			h5= message
+			
+			p put list here of all artworks. make it deletable/editable. 
+
+		table.striped.highlight.responsive-table
+			thead
+				tr
+					th(data-field='id') ID
+					th(data-field='artist') Artist
+					th(data-field='title') Title
+					th(data-field='description') Description
+					th(data-field='dateSince') Since...
+					th(data-field='material') Material
+					th(data-field='image') Image path
+					//- Nog link naar een image doen?
+					th(data-field='lat') Lat
+					th(data-field='lng') Lng
+					th(data-field='animalId') Occuring animals
+					//- th(data-field='createdat') CreatedAt
+					th(data-field='updatedat') Last updated
+					th(data-field='delete') Delete
+			tbody
+				each art in allArtworks
+					tr
+						td #{art.id}
+						td #{art.artist}
+						td 
+							a(href='adm-editart?id=' + art.id) #{art.title}
+						td #{art.description}
+						td #{art.dateSince}
+						td #{art.material}
+						td #{art.image}
+						td #{art.lat}
+						td #{art.lng}
+						td #{art.animalId}
+						//- td #{animal.createdAt}
+						td #{art.updatedAt}
+						td 
+							form(action=('/deleteart?id=' + art.id) method='post' autocomplete='off')
+								input(type='submit' value='Delete' id='deleteart')
+
+
+
+			
+
+
+
+				
+
+
+
+
+		main
+		include includes/footer.pug
