@@ -23,9 +23,24 @@ function initMap() {
 		// https://developers.google.com/maps/documentation/javascript/reference#MapOptions
 		// nog andere properties die niet verplichtz ijn
 	});
+	//made a simple test marker at my own home, no variable involved.
 	var marker = new google.maps.Marker({
-          position: home,
-          map: map
-        });
+		position: home,
+		map: map
+	});
+
+	$.getJSON('/json/artworks.json', function(artwork) {
+		$.each(artwork, function(key, data) {
+			console.log('-------------------------------------')
+			console.log(data)
+			var artLatLng = new google.maps.LatLng(data.lat, data.lng)
+            //Creating a marker and putting it on the map. 
+            var marker = new google.maps.Marker({
+            	position: artLatLng,
+            	map: map,
+            	title: data.title,
+            })
+        })
+	})
 }
 
