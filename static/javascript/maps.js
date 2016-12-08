@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    initMap();
+	initMap();
     // if i want to work with geolocation, i can in stead put initlocationprocedure here
     // $(".button-collapse").sideNav();
 });
@@ -14,9 +14,18 @@ $(document).ready(function() {
 // }
 
 var map;
+var home = {lat: 52.373522, lng: 4.858905};
+
 function initMap() {
 	map = new google.maps.Map(document.getElementById('map'), {
 		center: {lat: 52.380149, lng: 4.887603},
 		zoom: 12
+		// https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+		// nog andere properties die niet verplichtz ijn
 	});
+	var marker = new google.maps.Marker({
+          position: home,
+          map: map
+        });
 }
+
