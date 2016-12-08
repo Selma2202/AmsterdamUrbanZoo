@@ -30,6 +30,7 @@ app.set ('views', __dirname + '/views')
 let db = require ( __dirname + '/modules/database')
 
 // require routes
+let index = require (__dirname + '/routes/index')
 let admin = require ( __dirname + '/routes/admin')
 let addArt = require ( __dirname + '/routes/adm-addart')
 // let listArt = require ( __dirname + '/routes/adm-listart')
@@ -41,6 +42,7 @@ let addAdmin = require ( __dirname + '/routes/adm-addadmin')
 let logout = require ( __dirname + '/routes/logout')
 
 // use
+app.use ( '/', index)
 app.use ( '/', admin)
 app.use ( '/', addArt)
 // app.use ( '/', listArt)
