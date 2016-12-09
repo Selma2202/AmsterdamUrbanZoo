@@ -95,3 +95,35 @@ function initMap() {
 	})
 }
 
+
+///////////// TESTING to see whether i can upload a csv converted to json. 
+//Answer: yes i can, fortunately, however I will still have to figure out how to connect the animals to this as well.
+//If i want to try again to see how this looks, i can comment out the part above (from getJSON onwards) and leave this part open.
+// 	$.getJSON('/json/testdata_incomplete_2.json', function(artwork) {
+// 		$.each(artwork, function(key, data) {
+
+// 				//adding artwork information to infowwindow
+// 				var artContentString =
+// 				'<strong>Titel: </strong>' + data.title + '<br>' +
+// 				'<strong>Beschrijving: </strong>' + data.description + '<br>'
+
+// 				var infowindow = new google.maps.InfoWindow ({
+// 					content: 
+// 					'<h5>Kunstwerk</h5>' +
+// 					artContentString 
+// 				})
+// 				console.log(data.lat)
+// 				console.log(data.lng)
+// 				var artLatLng = new google.maps.LatLng(data.lat, data.lng)
+//             //Creating a marker and putting it on the map. 
+//             var marker = new google.maps.Marker({
+//             	position: artLatLng,
+//             	map: map,
+//             	title: data.title,
+//             })
+//             marker.addListener('click', function () {
+//             	infowindow.open(map, marker);
+//             })
+//         })
+// 	})
+// }
