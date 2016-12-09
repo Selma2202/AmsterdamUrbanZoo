@@ -42,13 +42,13 @@ router.get('/index', function (req, res) {
 		for (var i = artworks.length - 1; i >= 0; i--) {
 			artArray.push(artworks[i])
 		}
-		console.log ('##############################################')
-		console.log (artArray)
+		// console.log ('##############################################')
+		// console.log (artArray)
 		return artArray
 	})
 	.then( (mapArtworks) => {
-		console.log ('---------------------------------------')
-		console.log (mapArtworks)
+		// console.log ('---------------------------------------')
+		// console.log (mapArtworks)
 		//mss niet eens nodig als ik met data werk uit csv dat een json zelf kan worden? of nog wel omdat ik de database moet gebruiken juist?
 		fs.writeFile (__dirname + '/../static/json/artworks.json', JSON.stringify (mapArtworks), 'utf-8', function(error) { 
 			if(error) throw error

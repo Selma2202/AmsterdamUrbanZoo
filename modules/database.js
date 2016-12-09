@@ -190,6 +190,7 @@ db.conn.sync( {force: true}).then( () => {
 				// where: {name: 'kat'},
 			}]
 		}).then(arts => {
+			console.log(arts)
 			console.log(arts[0].animals[0].name)//kat
 			console.log(arts[0].animals[0].description)//Een kat zegt miauw
 			console.log(arts[1].animals[0].name)//panda

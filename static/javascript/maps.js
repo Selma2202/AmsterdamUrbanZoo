@@ -42,17 +42,24 @@ function initMap() {
 		infowindow.close();
 	})
 
-	var infowindow = new google.maps.InfoWindow ()
 
-		$.getJSON('/json/artworks.json', function(artwork) {
-			$.each(artwork, function(key, data) {
-				console.log('-------------------------------------')
-				console.log(data)
+
+	$.getJSON('/json/artworks.json', function(artwork) {
+		$.each(artwork, function(key, data) {
+			console.log('----------------------------------')
+				// console.log(data)
+				for (var i = 0; i < data.animals.length; i++) {
+					console.log(data.animals[i].name)
+				}
+				
 
 				var artContentString =
-				'<strong>Title: </strong>' + data.title + '<br>' +
-				'<strong>Description: </strong>' + data.description + '<br>'
-				infowindow.setContent(artContentString)
+				'<strong>Titel: </strong>' + data.title + '<br>' +
+				'<strong>Beschrijving: </strong>' + data.description + '<br>' +
+				'<strong>Voorkomende dieren: </strong>' + data.animals[0].name //nu hoe hier alle dieren die bij deze datatitel en beschrijving horen?
+				var infowindow = new google.maps.InfoWindow ({
+					content: artContentString
+				})
 
 				var artLatLng = new google.maps.LatLng(data.lat, data.lng)
             //Creating a marker and putting it on the map. 
@@ -65,6 +72,6 @@ function initMap() {
             	infowindow.open(map, marker);
             })
         })
-		})
-	}
+	})
+}
 
