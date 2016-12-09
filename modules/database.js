@@ -119,8 +119,8 @@ db.conn.sync( {force: true}).then( () => {
 		dateSince: '2010', //Of als integer doen? ligt er aan of ik alleen jaartallen doe
 		material: 'keramiek',
 		image: 'no image yet',
-		lat: '52.373905',
-		lng: '4.858910'
+		lat: '52.363905',
+		lng: '4.848910'
 	}).then(art => {
 		art.createAnimal ({
 			name: 'panda',

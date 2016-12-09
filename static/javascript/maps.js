@@ -48,15 +48,19 @@ function initMap() {
 		$.each(artwork, function(key, data) {
 			console.log('----------------------------------')
 				// console.log(data)
+
+				correspondingAnimals = []
 				for (var i = 0; i < data.animals.length; i++) {
 					console.log(data.animals[i].name)
+					correspondingAnimals.push(' ' + data.animals[i].name)
 				}
+				console.log (correspondingAnimals)
 				
 
 				var artContentString =
 				'<strong>Titel: </strong>' + data.title + '<br>' +
 				'<strong>Beschrijving: </strong>' + data.description + '<br>' +
-				'<strong>Voorkomende dieren: </strong>' + data.animals[0].name //nu hoe hier alle dieren die bij deze datatitel en beschrijving horen?
+				'<strong>Voorkomende dieren: </strong>' + correspondingAnimals //nu hoe hier alle dieren die bij deze datatitel en beschrijving horen?
 				var infowindow = new google.maps.InfoWindow ({
 					content: artContentString
 				})
