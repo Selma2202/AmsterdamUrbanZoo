@@ -99,6 +99,12 @@ function initMap() {
 ///////////// TESTING to see whether i can upload a csv converted to json. 
 //Answer: yes i can, fortunately, however I will still have to figure out how to connect the animals to this as well.
 //If i want to try again to see how this looks, i can comment out the part above (from getJSON onwards) and leave this part open.
+//TIPS TO SELF by maken van nieuwe json: 
+// let op lat/lng, welke is welke. 
+// Let op dat het met puntje is, niet met komma. 
+// Let op dat ze niet geconvert worden naar E+16 op het eind. 
+// Let op dat titels hetzelfde zijn als in de database. 
+// Kies hier bij input options "first row is column names" http://www.convertcsv.com/csv-to-json.htm
 // 	$.getJSON('/json/testdata_incomplete_2.json', function(artwork) {
 // 		$.each(artwork, function(key, data) {
 
