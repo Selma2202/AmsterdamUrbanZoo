@@ -23,24 +23,48 @@ function initMap() {
 		// https://developers.google.com/maps/documentation/javascript/reference#MapOptions
 		// nog andere properties die niet verplichtz ijn
 	});
-	//made a simple test marker at my own home, no variable involved.
+
+	//Test marker + infowindow at my own home, no changing data involved.
+	var homeContentString = '<br><br><strong>This is where Selma lives.</strong><br><br>'
+	var infowindow = new google.maps.InfoWindow ({
+		content: homeContentString
+	})
+
 	var marker = new google.maps.Marker({
 		position: home,
-		map: map
+		map: map,
+		title: 'Home'
 	});
+	marker.addListener('click', function () {
+		infowindow.open(map, marker);
+	})
+	google.maps.event.addListener(map, 'click', function () {
+		infowindow.close();
+	})
 
-	$.getJSON('/json/artworks.json', function(artwork) {
-		$.each(artwork, function(key, data) {
-			console.log('-------------------------------------')
-			console.log(data)
-			var artLatLng = new google.maps.LatLng(data.lat, data.lng)
+	var infowindow = new google.maps.InfoWindow ()
+
+		$.getJSON('/json/artworks.json', function(artwork) {
+			$.each(artwork, function(key, data) {
+				console.log('-------------------------------------')
+				console.log(data)
+
+				var artContentString =
+				'<strong>Title: </strong>' + data.title + '<br>' +
+				'<strong>Description: </strong>' + data.description + '<br>'
+				infowindow.setContent(artContentString)
+
+				var artLatLng = new google.maps.LatLng(data.lat, data.lng)
             //Creating a marker and putting it on the map. 
             var marker = new google.maps.Marker({
             	position: artLatLng,
             	map: map,
             	title: data.title,
             })
+            marker.addListener('click', function () {
+            	infowindow.open(map, marker);
+            })
         })
-	})
-}
+		})
+	}
 
