@@ -78,16 +78,16 @@ db.conn.sync( {force: true}).then( () => {
 
 
 	//create Art
-	db.Art.create ( {
-		artist: 'Testy boy',
-		title: 'Geen dieren',
-		description: 'Met dit kunstwerk proberen we te testen of de boel niet crasht als er geen dieren gedefinieerd zijn.',
-		dateSince: '2008', //Of als integer doen? ligt er aan of ik alleen jaartallen doe
-		material: 'hout',
-		image: 'no image yet',
-		lat: '52.351279',
-		lng: '4.869950'
-	})
+	// db.Art.create ( {
+	// 	artist: 'Testy boy',
+	// 	title: 'Geen dieren',
+	// 	description: 'Met dit kunstwerk proberen we te testen of de boel niet crasht als er geen dieren gedefinieerd zijn.',
+	// 	dateSince: '2008', //Of als integer doen? ligt er aan of ik alleen jaartallen doe
+	// 	material: 'hout',
+	// 	image: 'no image yet',
+	// 	lat: '52.351279',
+	// 	lng: '4.869950'
+	// })
 
 	db.Art.create ( {
 		artist: 'B. Pijper',

@@ -24,23 +24,22 @@ function initMap() {
 		// nog andere properties die niet verplichtz ijn
 	});
 
-	//Test marker + infowindow at my own home, no changing data involved.
-	var homeContentString = '<br><br><strong>This is where Selma lives.</strong><br><br>'
-	var infowindow = new google.maps.InfoWindow ({
-		content: homeContentString
-	})
-
-	var marker = new google.maps.Marker({
-		position: home,
-		map: map,
-		title: 'Home'
-	});
-	marker.addListener('click', function () {
-		infowindow.open(map, marker);
-	})
-	google.maps.event.addListener(map, 'click', function () {
-		infowindow.close();
-	})
+	//////////////// TEST MARKER + infowindow at my own home, no changing data involved.
+	// var homeContentString = '<br><br><strong>This is where Selma lives.</strong><br><br>'
+	// var infowindow = new google.maps.InfoWindow ({
+	// 	content: homeContentString
+	// })
+	// var marker = new google.maps.Marker({
+	// 	position: home,
+	// 	map: map,
+	// 	title: 'Home'
+	// });
+	// marker.addListener('click', function () {
+	// 	infowindow.open(map, marker);
+	// })
+	// google.maps.event.addListener(map, 'click', function () {
+	// 	infowindow.close();
+	// })
 
 
 
@@ -49,34 +48,36 @@ function initMap() {
 			console.log('----------------------------------')
 				// console.log(data)
 
-				//standaard waarde voor var animalContentString, die ingeladen kan worden in de infowindow als er geen dieren voorkomen. Komen er wel dieren in voor? dan wordt in de for-loop de waarde van de var aangepast)
-				var animalContentString = 'Dit kunstwerk bevat geen dieren.'
-				correspondingAnimals = []
-				for (var i = 0; i < data.animals.length; i++) {
-					console.log(data.animals[i].name)
-
-					//dit werkt, maar slechts voor één dier. Nu moet dit nog werken voor alle dieren.
-					if (data.animals[i].length !== 0) {
-						animalContentString = 
-						'<strong>Dieren in dit kunstwerk: </strong>' + data.animals[i].name + '<br>' +
-						'<strong>Naam: </strong>' + data.animals[i].name + '<br>' +
-						'<strong>Beschrijving: </strong>' + data.animals[i].description
-					}
-
-					correspondingAnimals.push(data.animals[i])
-				}
-				console.log (correspondingAnimals)
-				
-
+				//adding artwork information to infowwindow
 				var artContentString =
 				'<strong>Titel: </strong>' + data.title + '<br>' +
 				'<strong>Beschrijving: </strong>' + data.description + '<br>' 
 
-				var artAnimalString = ' en vast ook andere dieren.'
+				// preparing empty variables to load in the infowindow when filled
+				var animalContentString = ''
+				var correspondingAnimals = ''
 
-				//Het maken van een infowindow en de inhoud ervan
+				for (var i = 0; i < data.animals.length; i++) {
+					
+					if (data.animals[i].length !== 0) {
+						//adding info about the animals in the artworks
+						correspondingAnimals = correspondingAnimals + data.animals[i].name + ', '
+
+						animalContentString = animalContentString + (
+							'<strong>Naam: </strong>' + data.animals[i].name + '<br>' +
+							'<strong>Beschrijving: </strong>' + data.animals[i].description + '<br><br>'
+							)
+					}
+				}
+
+				//Making the infowindow itself and loading the content
 				var infowindow = new google.maps.InfoWindow ({
-					content: artContentString + artAnimalString + '<br><br>' + animalContentString
+					content: 
+					'<h5>Kunstwerk</h5>' +
+					artContentString + 
+					'<strong>Dieren in dit kunstwerk: </strong>' + correspondingAnimals + '<br><br>' + 
+					'<h5>Dieren</h5>' +	
+					animalContentString
 					//this proves content can consist of multiple variables, making it easier to make them.
 				})
 
