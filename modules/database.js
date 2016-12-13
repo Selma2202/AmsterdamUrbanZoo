@@ -22,7 +22,7 @@ db.conn = new sequelize ('urbanzoo', process.env.POSTGRES_USER, process.env.POST
 db.Art = db.conn.define ('art', {
 	artist: sequelize.STRING,
 	title: sequelize.STRING,
-	description: sequelize.STRING,
+	description: sequelize.TEXT,
 	dateSince: sequelize.STRING, //Of als integer doen? ligt er aan of ik alleen jaartallen doe
 	material: sequelize.STRING,
 	image: sequelize.STRING,
@@ -32,7 +32,7 @@ db.Art = db.conn.define ('art', {
 
 db.Animal = db.conn.define ('animal', {
 	name: sequelize.STRING,
-	description: sequelize.STRING,
+	description: sequelize.TEXT,
 	latinName: sequelize.STRING,
 	family: sequelize.STRING,
 	class: sequelize.STRING,
@@ -58,7 +58,7 @@ db.Art.hasMany( db.Animal )//Multiple animals can be in one art piece
 // db.Animal.belongsToMany( db.Art, {through: db.Appearence} )//One animal can be in multiple art pieces
 
 //Create (sample) admin, sample art pieces, sample animals.
-db.conn.sync( {force: true}).then( () => {
+db.conn.sync( {force: false}).then( () => {
 
 	//create admin
 	db.Admin.create( {

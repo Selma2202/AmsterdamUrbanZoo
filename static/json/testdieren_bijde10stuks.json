@@ -1,0 +1,123 @@
+[
+ {
+   "name": "hond",
+   "description": "De hond (Canis lupus familiaris) is een gedomesticeerde ondersoort van de wolf. De hond is een roofdier uit de familie van de hondachtigen (Canidae). De hond komt op alle continenten voor, meestal in gezelschap van de mens. Al sinds duizenden jaren wordt de hond gebruikt voor bewakingstaken, bij de jacht, als herdershond en als trekdier. Nog steeds heeft hij werk als politiehond of hulphond, maar de meeste honden worden tegenwoordig gehouden als gezelschapsdier. (Wikipedia)",
+   "latinName": "Canis lupus familiaris",
+   "family": "hondachtigen",
+   "class": "zoogdieren",
+   "size": "15cm - 70cm",
+   "weight": "3kg - 40kg",
+   "rangeContinent": "allemaal",
+   "rangeCountry": "overal"
+ },
+ {
+   "name": "gier",
+   "description": "De gieren van de Oude Wereld zijn roofvogels die horen in de familie van de havikachtigen (Accipitridae). Gieren onderscheiden zich in ecologische zin van de andere soorten roofvogels omdat het aaseters zijn. (Wikipedia)",
+   "latinName": "o.a. Gypaetus barbatus",
+   "family": "havikachtigen",
+   "class": "vogels",
+   "size": "95cm - 110cm",
+   "weight": "6kg - 11kg",
+   "rangeContinent": "Europa, Afrika, Azi�",
+   "rangeCountry": "meerdere landen"
+ },
+ {
+   "name": "aap",
+   "description": "De apen (Simiiformes, ook wel Simiae of Anthropoidea) zijn een infraorde uit de orde der primaten (Primates). Alle primaten die niet tot de infraorde van de apen behoren worden halfapen genoemd. Een groep halfapen, de spookdiertjes, wordt beschouwd als de nauwste verwant van de apen en samen worden ze geplaatst in de onderorde Haplorhini. (Wikipedia)",
+   "latinName": "Simiiformes",
+   "family": "primaten",
+   "class": "zoogdieren",
+   "size": "max. 1,7 m",
+   "weight": "max. 180 kg",
+   "rangeContinent": "Afrika, Azi�",
+   "rangeCountry": "meerdere landen"
+ },
+ {
+   "name": "neushoorn",
+   "description": "De neushoorns (Rhinocerotidae) zijn een familie van grote zoogdieren die heden ten dage vijf soorten telt die voorkomen in Afrika en Azi�. De neushoorn heeft een krom naar achteren groeiende hoorn net achter het beweeglijke deel van de neus; drie soorten hebben daarachter nog een kleinere stomp; bij de Javaanse en de Indische neushoorn ontbreekt die. Er zijn nog vijf soorten neushoorns, waarvan de meeste in meerdere of mindere mate bedreigd worden in hun voortbestaan door handel in producten van de hoorn. (Wikipedia)",
+   "latinName": "Rhinocerotidae",
+   "family": "neushoorns",
+   "class": "zoogdieren",
+   "size": "1.75 - 2.0 m",
+   "weight": "tot 2,500 - 3,200 kg",
+   "rangeContinent": "Afrika, Azi�",
+   "rangeCountry": "meerdere landen"
+ },
+ {
+   "name": "arend",
+   "description": "Arenden of adelaars zijn dagactieve, middelgrote tot grote roofvogels met meestal brede vleugels, stevige snavel en scherpe klauwen (nagels). Arenden werden en worden veel gebruikt als symbool door landen en organisaties, omdat ze macht, schoonheid en onafhankelijkheid zouden uitstralen. (Wikipedia)",
+   "latinName": "o.a. Haliaeetus leucocephalus",
+   "family": "havikachtigen",
+   "class": "vogels",
+   "size": "tot 100cm",
+   "weight": "tot 6,7kg",
+   "rangeContinent": "Europa, Azi�, Afrika, Noord-Amerika, Zuid-Amerika, Oceani�",
+   "rangeCountry": "meerdere landen"
+ },
+ {
+   "name": "eend",
+   "description": "Eend is de algemene naam voor een aantal soorten vogels uit de familie van eendachtigen (Anatidae). Alle soorten uit de Anatidae worden \"eenden\" genoemd, behalve de soorten uit de onderfamilie Anserinae, de ganzen en zwanen. Eenden zijn hoofdzakelijk aquatische vogels, meestal kleiner dan hun verwanten, de zwanen en de ganzen, met een kortere nek, en kunnen in zowel zoet als zout water worden gevonden. De Tadorninae, waartoe onder andere de bergeend behoort, houden qua formaat het midden tussen een gans en een eend. (Wikipedia)",
+   "latinName": "o.a. Anas platyrhynchos",
+   "family": "eendachtigen",
+   "class": "vogels",
+   "size": "51 - 62cm",
+   "weight": "tot 1500 gram",
+   "rangeContinent": "Noord-Amerika, Europa, Azi�, Oceani�, Afrika",
+   "rangeCountry": "meerdere landen"
+ },
+ {
+   "name": "ezel",
+   "description": "Ezels hebben lange oren, een pluim aan het eind van de staart, en een groot uithoudingsvermogen. Ze hebben een grijze of bruinachtige vacht. De meeste wilde ezels vertonen de typische wildkleur, met een aalstreep. Deze aalstreep is ook bij de meeste gedomesticeerde ezels nog te zien. De onderzijde, de snuit en de flanken vertonen lichtere kleuren. Het geluid dat ezels maken noemt men: balken. (Wikipedia)",
+   "latinName": "Equus africanus asinus",
+   "family": "paardachtigen",
+   "class": "zoogdieren",
+   "size": "95 - 140 cm",
+   "weight": "80 - 480 kg ",
+   "rangeContinent": "allemaal",
+   "rangeCountry": "meerdere landen"
+ },
+ {
+   "name": "beer",
+   "description": "Beren (Ursidae) vormen een familie binnen de orde der roofdieren (Carnivora). Ze behoren net als de hondachtigen, zeeroofdieren, kleine beren en marterachtigen tot de onderorde Caniformia. De familie omvat acht soorten in vijf geslachten. De eerste beren waren niet groot, maar ze hebben zich ontwikkeld tot grote landroofdieren: de Kodiakbeer (een ondersoort van de bruine beer) en de ijsbeer zijn de grootste landroofdieren op aarde. Huidige beren zijn groot, met stevige, korte ledematen en een kleine staart. (Wikipedia)",
+   "latinName": "o.a. Ursus arctos horribilis",
+   "family": "beren",
+   "class": "zoogdieren",
+   "size": "tot 3 meter",
+   "weight": "tot 600kg",
+   "rangeContinent": "Noord-Amerika, Zuid-Amerika, Europa, Azi�",
+   "rangeCountry": "meerdere landen"
+ },
+ {
+   "name": "varken",
+   "description": "Het (tamme) varken (Sus scrofa domesticus, Sus scrofa domestica, Sus domesticus of Sus domestica) is een gedomesticeerd wild zwijn en behoort tot de familie der varkens (Suidae). Varkens werden 5000 tot 6000 jaar geleden gedomesticeerd. Met de wetenschappelijke naam Sus scrofa wordt het everzwijn of wilde zwijn aangeduid. In Nederland leven ruim 20 miljoen en in Belgi� 6,7 miljoen varkens. (Wikipedia)",
+   "latinName": "Sus scrofa domesticus",
+   "family": "varkens",
+   "class": "zoogdieren",
+   "size": "0,9 - 1,8 meter",
+   "weight": "50 - 350kg",
+   "rangeContinent": "meerdere continenten",
+   "rangeCountry": "meerdere landen"
+ },
+ {
+   "name": "paard",
+   "description": "Het paard (Equus ferus caballus) is een gedomesticeerd hoefdier uit de orde der onevenhoevigen, een van de ongeveer tien huidige soorten uit de familie der paardachtigen (Equidae). Het gedomesticeerde paard wordt voornamelijk gehouden als rij- en trekdier. (Wikipedia)",
+   "latinName": "Equus ferus caballus",
+   "family": "paardachtigen",
+   "class": "zoogdieren",
+   "size": "tot ca 1,73 m",
+   "weight": "tot 600kg",
+   "rangeContinent": "meerdere continenten",
+   "rangeCountry": "meerdere landen"
+ },
+ {
+   "name": "merel",
+   "description": "De merel (Turdus merula)  is een vogel uit de familie lijsters (Turdidae). De naam komt van het Latijnse woord voor merel, merula. De merel is ��n van de bekendste soorten van deze lijsterfamilie en daarmee een typisch voorbeeld van een zangvogel. De soort Turdus merula is nog eens verder opgedeeld in enkele ondersoorten. Zo leeft op de Canarische Eilanden de T. merula cabrerae. T. merula azorensis (op de Azoren) is kleiner en donkerder. Hier heeft het vrouwtje ook vaak een helder gekleurde snavel. T. merula mauritanicus (te vinden in Noordwest-Afrika) is grijzer dan de nominaat ondersoort T. merula merula uit Noordwest-Europa. Vaak verdeelt men de merels ook onder in twee groepen: stads- en bosmerels. (Wikipedia)",
+   "latinName": "Turdus merula",
+   "family": "lijsters",
+   "class": "vogels",
+   "size": "24-25 centimeter",
+   "weight": "80 - 110 gram",
+   "rangeContinent": "Europa, Azi�, Oceani�",
+   "rangeCountry": "meerdere landen"
+ }
+]
