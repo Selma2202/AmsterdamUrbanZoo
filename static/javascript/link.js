@@ -1,4 +1,5 @@
 //  thisAnimal.setArt()
+// import database
 //findall
 //forloop voor elk dier, zoek of het voorkomt in art.animal
 
@@ -6,20 +7,29 @@
 
 let db = require(__dirname + '/../../modules/database')
 
-db.Animal.findAll({
-	order: [['name', 'ASC']]
-}).then( (animals) => {
-	for (var i = 0; i < animals.length; i++) {
-		console.log('+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
-		console.log(animals[i].name)
-		db.Art.findAll({
-			where: {
-				animal: {
-					$like: '%'+animals[i].name+'%'
-				}
+function linkArt( currentAnimal ) {
+	console.log(currentAnimal.name + ' triggered')
+	db.Art.findAll({
+		where: {
+			animal: {
+				$iLike: '%'+currentAnimal.name+'%'
 			}
-		}).then( (arts) => {
-			console.log('THIS IS THE RESULT:' + arts)
-		})
-	}
-})
+		}
+	}).then( (arts) => {
+		console.log('The ' + currentAnimal.name + ' count: ' + arts.length)
+		for (var i = arts.length - 1; i >= 0; i--) {
+			arts[i].setAnimals(currentAnimal)
+		}
+	})
+}
+
+setTimeout(function(){
+	db.Animal.findAll({
+		order: [['name', 'ASC']]
+	}).then( (animals) => {
+		for (var i = 0; i < animals.length; i++) {
+			linkArt( animals[i] )
+		}
+	})
+
+}, 5000)

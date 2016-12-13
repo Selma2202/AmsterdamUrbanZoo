@@ -56,6 +56,7 @@ db.Appearence = db.conn.define('appearence', {
 ////Define relations
 //The relation can not be hasMany bothways (even though multiple animals can be in one art piece, and one animal can be in multiple art pieces) because sequelize would then break. Only one needs to be defined, so we can get the animals by including the model in the other model
 db.Art.hasMany( db.Animal )//Multiple animals can be in one art piece
+db.Animal.belongsToMany( db.Art, { through: 'animallink' } )
 // db.Animal.belongsToMany( db.Art, {through: db.Appearence} )//One animal can be in multiple art pieces
 
 //Create (sample) admin, sample art pieces, sample animals.

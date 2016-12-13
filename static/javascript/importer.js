@@ -29,7 +29,8 @@ setTimeout(function(){
         material: data[i].material,
         image: data[i].image,
         lat: data[i].lat,
-        lng: data[i].lng
+        lng: data[i].lng,
+        animal: data[i].animal
       })
     }
   })

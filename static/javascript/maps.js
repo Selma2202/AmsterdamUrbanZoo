@@ -49,6 +49,7 @@ function initMap() {
 				for (var i = 0; i < data.animals.length; i++) {
 
 					if (data.animals[i].length !== 0) {
+						console.log(data.animals[0])
 						//adding info about the animals in the artworks
 						correspondingAnimals = correspondingAnimals + data.animals[i].name + ', '
 
