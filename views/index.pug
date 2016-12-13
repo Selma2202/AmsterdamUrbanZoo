@@ -1,17 +1,24 @@
-html
-	head
-		include includes/header.pug
-	body
-		div.container
-			h2.headfont Amsterdam Urban Zoo
-			h5= message
-		div#map
-		div.container
-			p voor als ik nog andere dingen eronder wil typen
+head
+	link( href="materialize-css/dist/css/materialize.min.css" type="text/css" rel="stylesheet")
+	link( href="css/styles.css" type="text/css" rel="stylesheet")
+	link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+body
+	div.row#gethigher
+		div.col.s12.m9.l10
+			div#map
+		div.col.s12.m3.l2
+			h1
+				| A M S T E R D A M 
+				span.greyheading  U R B A N  
+				| Z O O 
+				//- span.greyheading .
 
-		main
-		script(src='javascript/jquery-3.1.1.min.js' type='text/javascript')
-		script(src="materialize-css/dist/js/materialize.js" type="text/javascript" rel="javascript")
-		script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcXRGB0djgEmPPDULsd7qOTAa7Qj_TGYQ&callback=initMap")
-		//- script(src='javascript/map-icons.js' type='text/javascript')
-		script(src='javascript/maps.js' type='text/javascript')
+
+
+
+	main
+	script(src='javascript/jquery-3.1.1.min.js' type='text/javascript')
+	script(src="materialize-css/dist/js/materialize.js" type="text/javascript" rel="javascript")
+	script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcXRGB0djgEmPPDULsd7qOTAa7Qj_TGYQ&callback=initMap")
+	//- script(src='javascript/map-icons.js' type='text/javascript')
+	script(src='javascript/maps.js' type='text/javascript')
