@@ -67,7 +67,10 @@ function initMap() {
 				'<strong>Beschrijving: </strong>' + data.description + '<br>' +
 				'<img class="mapsimages" src="/images/database/' + data.image + '"><br>'
 
-				infowindow.setContent('<h5>Kunstwerk</h5>' + artContentString)
+				infowindow.setContent('<h5>Kunstwerk</h5>' + artContentString + 
+					'<strong>Dieren in dit kunstwerk: </strong>' + correspondingAnimals + '<br><br>' + 
+					'<h5>Dieren</h5>' +	
+					animalContentString)
 				infowindow.open(map, this);
 			})
 

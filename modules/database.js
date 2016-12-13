@@ -27,7 +27,8 @@ db.Art = db.conn.define ('art', {
 	material: sequelize.STRING,
 	image: sequelize.STRING,
 	lat: sequelize.STRING,
-	lng: sequelize.STRING
+	lng: sequelize.STRING,
+	animal: sequelize.STRING
 })
 
 db.Animal = db.conn.define ('animal', {
@@ -38,7 +39,7 @@ db.Animal = db.conn.define ('animal', {
 	class: sequelize.STRING,
 	size: sequelize.STRING, //this way I can use stripes (5-10cm)
 	weight: sequelize.STRING,
-	rangeContinent: sequelize.ARRAY(sequelize.TEXT),
+	rangeContinent: sequelize.STRING,
 	rangeCountry: sequelize.STRING
 })
 
@@ -89,129 +90,129 @@ db.conn.sync( {force: false}).then( () => {
 	// 	lng: '4.869950'
 	// })
 
-	db.Art.create ( {
-		artist: 'B. Pijper',
-		title: 'Twee dieren',
-		description: 'Met zijn stuk twee dieren probeert Bram uit te dragen hoe we allemaal in harmonie leven',
-		dateSince: '2008', //Of als integer doen? ligt er aan of ik alleen jaartallen doe
-		material: 'hout',
-		image: 'no image yet',
-		lat: '52.358279',
-		lng: '4.865050'
-	}).then(art => {
-		art.createAnimal ({
-			name: 'eend',
-			description: 'Een eend zegt kwak',
-			latinName: 'Duckus Magnificus',
-			family: 'eendachtigen',
-			class: 'vogels',
-			size: '10 cm', //this way I can use stripes (5-10cm)
-			weight: '2 kilo',
-			rangeContinent: ['Europa'],
-			rangeCountry: 'Nederland'
-		})
-		art.createAnimal ({
-			name: 'kat',
-			description: 'Een kat zegt miauw',
-			latinName: 'Kattius Magnificus',
-			family: 'katachtigen',
-			class: 'zoogdieren',
-			size: '20 cm', //this way I can use stripes (5-10cm)
-			weight: '2,5 kilo',
-			rangeContinent: ['Azie'],
-			rangeCountry: 'China'
-		})
-	})
+	// db.Art.create ( {
+	// 	artist: 'B. Pijper',
+	// 	title: 'Twee dieren',
+	// 	description: 'Met zijn stuk twee dieren probeert Bram uit te dragen hoe we allemaal in harmonie leven',
+	// 	dateSince: '2008', //Of als integer doen? ligt er aan of ik alleen jaartallen doe
+	// 	material: 'hout',
+	// 	image: 'no image yet',
+	// 	lat: '52.358279',
+	// 	lng: '4.865050'
+	// }).then(art => {
+	// 	art.createAnimal ({
+	// 		name: 'eend',
+	// 		description: 'Een eend zegt kwak',
+	// 		latinName: 'Duckus Magnificus',
+	// 		family: 'eendachtigen',
+	// 		class: 'vogels',
+	// 		size: '10 cm', //this way I can use stripes (5-10cm)
+	// 		weight: '2 kilo',
+	// 		rangeContinent: ['Europa'],
+	// 		rangeCountry: 'Nederland'
+	// 	})
+	// 	art.createAnimal ({
+	// 		name: 'kat',
+	// 		description: 'Een kat zegt miauw',
+	// 		latinName: 'Kattius Magnificus',
+	// 		family: 'katachtigen',
+	// 		class: 'zoogdieren',
+	// 		size: '20 cm', //this way I can use stripes (5-10cm)
+	// 		weight: '2,5 kilo',
+	// 		rangeContinent: ['Azie'],
+	// 		rangeCountry: 'China'
+	// 	})
+	// })
 
-	db.Art.create ( {
-		artist: 'Selma D.',
-		title: 'Pandatoren',
-		description: 'Door een toren te bouwen van 1200 panda\'s, toont Selma met dit kunstwerk de hoeveelheid panda\'s die nog in het wild voorkomen',
-		dateSince: '2010', //Of als integer doen? ligt er aan of ik alleen jaartallen doe
-		material: 'keramiek',
-		image: 'no image yet',
-		lat: '52.363905',
-		lng: '4.848910'
-	}).then(art => {
-		art.createAnimal ({
-			name: 'panda',
-			description: 'Panda\'s zijn zwart-wit.',
-			latinName: 'Pandus Magnificus',
-			family: 'beerachtigen',
-			class: 'zoogdieren',
-			size: '1 m', //this way I can use stripes (5-10cm)
-			weight: '20 kilo',
-			rangeContinent: ['Azië'],
-			rangeCountry: 'China'
-		})
-	})
+	// db.Art.create ( {
+	// 	artist: 'Selma D.',
+	// 	title: 'Pandatoren',
+	// 	description: 'Door een toren te bouwen van 1200 panda\'s, toont Selma met dit kunstwerk de hoeveelheid panda\'s die nog in het wild voorkomen',
+	// 	dateSince: '2010', //Of als integer doen? ligt er aan of ik alleen jaartallen doe
+	// 	material: 'keramiek',
+	// 	image: 'no image yet',
+	// 	lat: '52.363905',
+	// 	lng: '4.848910'
+	// }).then(art => {
+	// 	art.createAnimal ({
+	// 		name: 'panda',
+	// 		description: 'Panda\'s zijn zwart-wit.',
+	// 		latinName: 'Pandus Magnificus',
+	// 		family: 'beerachtigen',
+	// 		class: 'zoogdieren',
+	// 		size: '1 m', //this way I can use stripes (5-10cm)
+	// 		weight: '20 kilo',
+	// 		rangeContinent: ['Azië'],
+	// 		rangeCountry: 'China'
+	// 	})
+	// })
 
-	db.Art.create ( {
-		artist: 'Manon',
-		title: 'Drie gekkies',
-		description: 'Een drijvende, speelse samenwerking tussen paard, ezel en kameel.',
-		dateSince: '2005', //Of als integer doen? ligt er aan of ik alleen jaartallen doe
-		material: 'plastic',
-		image: 'no image yet',
-		lat: '52.379848',
-		lng: '4.907349'
-	}).then(art => {
-		art.createAnimal ({
-			name: 'paard',
-			description: 'Een paard heeft benen ipv poten',
-			latinName: 'Paardus Magnificus',
-			family: 'paardachtigen',
-			class: 'zoogdieren',
-			size: '1,5 m', //this way I can use stripes (5-10cm)
-			weight: '29 kilo',
-			rangeContinent: ['Europa'],
-			rangeCountry: 'België'
-		})
-		art.createAnimal ({
-			name: 'ezel',
-			description: 'Een ezel zegt i-a',
-			latinName: 'Ezelus Magnificus',
-			family: 'paardachtigen',
-			class: 'zoogdieren',
-			size: '1,5 m', //this way I can use stripes (5-10cm)
-			weight: '15 kilo',
-			rangeContinent: ['Europa'],
-			rangeCountry: 'Frankrijk'
-		})
-		art.createAnimal ({
-			name: 'kameel',
-			description: 'Een kameel heeft twee bulten, een dromedaris maar één.',
-			latinName: 'Kamelus Magnificus',
-			family: 'kameelachtigen',
-			class: 'zoogdieren',
-			size: '205 cm', //this way I can use stripes (5-10cm)
-			weight: '30 kilo',
-			rangeContinent: ['Afrika'],
-			rangeCountry: 'Zuid-Afrika'
-		})
-	})
+	// db.Art.create ( {
+	// 	artist: 'Manon',
+	// 	title: 'Drie gekkies',
+	// 	description: 'Een drijvende, speelse samenwerking tussen paard, ezel en kameel.',
+	// 	dateSince: '2005', //Of als integer doen? ligt er aan of ik alleen jaartallen doe
+	// 	material: 'plastic',
+	// 	image: 'no image yet',
+	// 	lat: '52.379848',
+	// 	lng: '4.907349'
+	// }).then(art => {
+	// 	art.createAnimal ({
+	// 		name: 'paard',
+	// 		description: 'Een paard heeft benen ipv poten',
+	// 		latinName: 'Paardus Magnificus',
+	// 		family: 'paardachtigen',
+	// 		class: 'zoogdieren',
+	// 		size: '1,5 m', //this way I can use stripes (5-10cm)
+	// 		weight: '29 kilo',
+	// 		rangeContinent: ['Europa'],
+	// 		rangeCountry: 'België'
+	// 	})
+	// 	art.createAnimal ({
+	// 		name: 'ezel',
+	// 		description: 'Een ezel zegt i-a',
+	// 		latinName: 'Ezelus Magnificus',
+	// 		family: 'paardachtigen',
+	// 		class: 'zoogdieren',
+	// 		size: '1,5 m', //this way I can use stripes (5-10cm)
+	// 		weight: '15 kilo',
+	// 		rangeContinent: ['Europa'],
+	// 		rangeCountry: 'Frankrijk'
+	// 	})
+	// 	art.createAnimal ({
+	// 		name: 'kameel',
+	// 		description: 'Een kameel heeft twee bulten, een dromedaris maar één.',
+	// 		latinName: 'Kamelus Magnificus',
+	// 		family: 'kameelachtigen',
+	// 		class: 'zoogdieren',
+	// 		size: '205 cm', //this way I can use stripes (5-10cm)
+	// 		weight: '30 kilo',
+	// 		rangeContinent: ['Afrika'],
+	// 		rangeCountry: 'Zuid-Afrika'
+	// 	})
+	// })
 
 
 
-	//To check whether it works
-	setTimeout(() => {
-		db.Art.findAll({
-			include: [{
-				model: db.Animal,
-				// where: {name: 'kat'},
-			}]
-		}).then(arts => {
-			console.log(arts)
-			console.log(arts[0].animals[0].name)//kat
-			console.log(arts[0].animals[0].description)//Een kat zegt miauw
-			console.log(arts[1].animals[0].name)//panda
-			console.log(arts[1].animals[0].description)//Panda's zijn zwart-wit.
-			console.log(arts[2].animals[2].name)//paard
-			console.log(arts[2].animals[2].description)//Een paard heeft benen ipv poten
-			console.log(arts[2].animals[0].name)//kameel
-			console.log(arts[2].animals[0].description)//Een kameel heeft twee bulten, een dromedaris maar één.
-		})
-	}, 2000)
+	// //To check whether it works
+	// setTimeout(() => {
+	// 	db.Art.findAll({
+	// 		include: [{
+	// 			model: db.Animal,
+	// 			// where: {name: 'kat'},
+	// 		}]
+	// 	}).then(arts => {
+	// 		console.log(arts)
+	// 		console.log(arts[0].animals[0].name)//kat
+	// 		console.log(arts[0].animals[0].description)//Een kat zegt miauw
+	// 		console.log(arts[1].animals[0].name)//panda
+	// 		console.log(arts[1].animals[0].description)//Panda's zijn zwart-wit.
+	// 		console.log(arts[2].animals[2].name)//paard
+	// 		console.log(arts[2].animals[2].description)//Een paard heeft benen ipv poten
+	// 		console.log(arts[2].animals[0].name)//kameel
+	// 		console.log(arts[2].animals[0].description)//Een kameel heeft twee bulten, een dromedaris maar één.
+	// 	})
+	// }, 2000)
 
 
 
