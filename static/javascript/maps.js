@@ -48,7 +48,7 @@ var infowindow = new google.maps.InfoWindow()
 $.getJSON('/json/artworks.json', function(artwork) {
 	$.each(artwork, function(key, data) {
 		console.log('----------------------------------')
-				// console.log(data)
+				console.log(data.title)
 
 				//adding artwork information to infowwindow
 				var artLatLng = new google.maps.LatLng(data.lat, data.lng)
@@ -68,7 +68,7 @@ $.getJSON('/json/artworks.json', function(artwork) {
 				for (var i = 0; i < data.animals.length; i++) {
 
 					if (data.animals[i].length !== 0) {
-						console.log(data.animals[0])
+						console.log(data.animals[0].description)
 						//adding info about the animals in the artworks
 						correspondingAnimals = correspondingAnimals + data.animals[i].name + ', '
 
@@ -85,7 +85,7 @@ $.getJSON('/json/artworks.json', function(artwork) {
 				'<strong>Kunstenaar: </strong>' + data.artist + '<br>' +
 				'<strong>Titel: </strong>' + data.title + '<br>' +
 				'<strong>Beschrijving: </strong>' + data.description + '<br>' +
-				'<img class="mapsimages" src="/images/database/' + data.image + '"><br>'
+				'<img class="mapsimages" src="/images/database/' + data.image + '.jpg"><br>'
 
 				infowindow.setContent('<div class=infowindowdiv><h5>Kunstwerk</h5>' + artContentString + 
 					'<strong>Dieren in dit kunstwerk: </strong>' + correspondingAnimals + '<br><br>' + 

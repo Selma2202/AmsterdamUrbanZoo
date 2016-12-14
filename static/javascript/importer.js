@@ -18,7 +18,7 @@ function fileParser (filename, callback){
 //import a json of artworks into the database (note: this adds, this does not replace)
 setTimeout(function(){
   console.log('Starting Import')
-  fileParser( __dirname + '/../json/testdata_10stuks.json', function(data) {
+  fileParser( __dirname + '/../json/allekunst-incopleet.json', function(data) {
     console.log('Start Art import')
     for (var i = 0; i < data.length; i++) {
       db.Art.create({
@@ -37,7 +37,7 @@ setTimeout(function(){
 
 
   //import a json of animals into the database (note: this adds, this does not replace)
-  fileParser( __dirname + '/../json/testdieren_bijde10stuks.json', function(data) {
+  fileParser( __dirname + '/../json/alledieren-incompleet.json', function(data) {
     console.log('Start animal import')
     for (var i = 0; i < data.length; i++) {
 
