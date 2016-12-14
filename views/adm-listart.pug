@@ -42,8 +42,17 @@ html
 						//- td #{animal.createdAt}
 						td #{art.updatedAt}
 						td 
-							form(action=('/deleteart?id=' + art.id) method='post' autocomplete='off')
-								input(type='submit' value='Delete' id='deleteart')
+							p #{art.id}
+							a.waves-effect.waves-light.btn(href="#artdelete-modal") Delete
+							#artdelete-modal.modal
+								.modal-content
+									h4 Delete animal "#{art.title}"?
+									|       
+									p Are you sure you want to delete this item?
+								|     
+								.modal-footer
+									a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href="#!") Cancel
+									a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href=('/deleteart?id=' + art.id) method='post') Delete
 
 
 
