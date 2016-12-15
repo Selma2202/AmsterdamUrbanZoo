@@ -1,11 +1,5 @@
-/*p {
-	color: blue;
-	}*/
-
-
 $backgroundcolor: #E0F7FA; 
 $footerheader: #00ACC1; 
-// $body-color: #FAFAFA;
 
 // // Formcolours
 $formInputText: #212121;
@@ -64,7 +58,7 @@ h1 {
 }
 
 .mapsimages {
-	width: 50%;
+	width: 80%;
 	display: block;
 	margin: 10px auto;
 }
@@ -101,109 +95,12 @@ ul li a {
 // }
 
 .btn {
-	background-color:$formUnderlineWhenClicked;
-}
-
-.btn:hover {
 	background-color:$formUnderlineWhenClickedShadow;
 }
 
-// @media all and (min-width: 960px) {
-// 	.main-title{
-// 		font-size: 105px;
-// 	}
-// 	.container-mainbox {
-//  		height: 95vh;
-//  	}
-// 	.container-secondbox {
-//  		height: 100vh;
-// 	}
-// 	.main-title2 {
-// 		font-size: 105px;
-// 		padding-top:2%;
-// 	}
-// 	.img-container {
-// 		margin-top:3%;
-// 	}
-// }
-
-// @media all and (max-width: 959px) and (min-width: 600px) {
-// 	.main-title{
-// 	    font-size: 10vw;
-// 	  }
-// 	.container-mainbox {
-//  		height: 93vh;
-//  	}
-// 	.container-secondbox {
-// 		height:100vh;
-// 	}
-// 	.main-title2 {
-// 		font-size: 10vw;
-// 		padding-top:5%;
-// 	}
-// 	.img-container {
-// 		margin-top:5%;
-// 	}
-// }
-
-// @media all and (max-width: 599px) and (min-width: 50px) {
-// 	.main-title {
-// 	    font-size: 15vw;
-// 	    margin-bottom:5%;
-// 	 }
-// 	.container-mainbox {
-//  		height: 93vh;
-// 	}
-// 	.container-secondbox {
-//  		height: 100vh;
-// 	}
-// 	.main-title2 {
-// 		font-size: 15vw;
-// 		padding-top:6%;
-// 	}
-// 	.img-container {
-// 		margin-top:15%;
-// 	}
-// }
-
-// .main-title, .main-title2 {
-// 	font-family: $index-font;
-// }
-
-
-
-// #arrow {
-// 	width:70px;
-// 	height: auto;
-// }
-
-// .container-secondbox {
-// 	background-color: #BDBDBD;
-// }
-
-// .sub-header {
-// 	font-weight: 200;
-// }
-
-
-// .buttonholder {
-// 	text-align: center;
-// }
-
-
-// /* FORM SHIZZLE */
-// /* label color */
-// .input-field {
-// 	margin-top: 0rem;
-
-// 	label {
-// 		color: $formInputText;
-// 	}
-// }
-
-// .rowbackgr {
-// 	margin-top:4%;
-// }
+.btn:hover {
+	background-color:$formUnderlineWhenClicked;
+}
 
 
 // For text forms

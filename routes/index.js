@@ -16,26 +16,6 @@ const router = express.Router ( )
 
 
 router.get('/index', function (req, res) {
-// db.Art.findAll({
-// 	include: [{
-// 		model: db.Animal
-// 	}]
-// })
-// .then( (artworks) =>{
-// 	let artArray = []
-// 	for (var i = artworks.length - 1; i >= 0; i--) {
-// 		artArray.push(artworks[i])
-// 	}
-// 	return artArray
-// })
-// .then( (mapArtworks) => {
-// 	fs.writeFile (__dirname + '/../static/json/artworks.json', JSON.stringify (mapArtworks), 'utf-8', function(error) { 
-// 		if(error) throw error
-// 			console.log(error)
-// 		console.log("it's saved!")
-// 	})
-// })
-// .then ( () => {
 	console.log('index page is now showing in the browser')
 	res.render('index')
 })

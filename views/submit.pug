@@ -1,0 +1,34 @@
+html
+	head
+		include includes/header.pug
+	body
+		div.container
+			h2 Dier toevoegen
+			div.row
+				div(class='col s12')
+					p Heb je zelf een kunstwerk gespot dat nog niet op deze kaart staat? Laat het ons weten! Let op, het kunstwerk dient wel in het openbaar of in een publieke ruimte te staan.
+
+			div.row
+				form.col.s12(action='/adm-addart' method='post')
+					div.row
+						div.input-field.col.s12
+							input#artist.validate(name='jouwnaam' type='text' required)
+							label(for='jouwnaam') Jouw naam
+						div.input-field.col.s12
+							input#description.validate(name='jouwemail' type='email' required)
+							label(for='jouwemail') Jouw e-mail (zo kunnen we je informeren wanneer deze online staat.)
+						div.input-field.col.s12
+							textarea#omschrijving.materialize-textarea
+							label(for='omschrijving') Beschrijf zo duidelijk mogelijk waar het kunstwerk staat (adres, coördinaten of andere omgevingskenmerken) en welke dieren er in voorkomen. Mocht je informatie weten over de artiest, dan horen we dit ook al graag!
+						div.input-field.col.l2
+							input#submit.btn.waves-effect(type='submit' value='Verstuur bericht')
+
+						
+
+						
+
+
+
+
+		main
+		include includes/footer.pug

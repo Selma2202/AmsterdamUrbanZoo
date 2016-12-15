@@ -78,7 +78,7 @@ db.conn.sync( {force: false}).then( () => {
 		}) 
 	})
 
-
+//TESTDATA
 	//create Art
 	// db.Art.create ( {
 	// 	artist: 'Testy boy',

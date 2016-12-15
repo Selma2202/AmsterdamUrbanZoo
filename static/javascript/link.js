@@ -1,7 +1,3 @@
-//  thisAnimal.setArt()
-// import database
-//findall
-//forloop voor elk dier, zoek of het voorkomt in art.animal
 
 'use strict'
 

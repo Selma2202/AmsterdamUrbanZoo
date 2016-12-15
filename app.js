@@ -31,6 +31,8 @@ let db = require ( __dirname + '/modules/database')
 
 // require routes
 let index = require (__dirname + '/routes/index')
+let about = require ( __dirname + '/routes/about')
+let submit = require ( __dirname + '/routes/submit')
 let admin = require ( __dirname + '/routes/admin')
 let addArt = require ( __dirname + '/routes/adm-addart')
 let listArt = require ( __dirname + '/routes/adm-listart')
@@ -44,6 +46,8 @@ let logout = require ( __dirname + '/routes/logout')
 
 // use
 app.use ( '/', index)
+app.use ( '/', about)
+app.use ( '/', submit)
 app.use ( '/', admin)
 app.use ( '/', addArt)
 app.use ( '/', listArt)

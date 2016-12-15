@@ -57,7 +57,7 @@ $.get('/showall', function(artwork) {
 
 		//adding artwork information to infowwindow
 		var artLatLng = new google.maps.LatLng(data.lat, data.lng)
-		var markerIcon = '/images/testgoogleicon2.png'
+		var markerIcon = '/images/testgoogleicon4.png'
 		//Creating a marker and putting it on the map. 
 		var marker = new google.maps.Marker({
 			position: artLatLng,
@@ -80,7 +80,14 @@ $.get('/showall', function(artwork) {
 
 				animalContentString = animalContentString + (
 					'<strong>Naam: </strong>' + data.animals[i].name + '<br>' +
-					'<strong>Beschrijving: </strong>' + data.animals[i].description + '<br><br>'
+					'<strong>Latijnse naam: </strong>' + data.animals[i].latinName + '<br>' +
+					'<strong>Beschrijving: </strong>' + data.animals[i].description + '<br>' +
+					'<strong>Familie: </strong>' + data.animals[i].family + '<br>' +
+					'<strong>Klasse: </strong>' + data.animals[i].class + '<br>' +
+					'<strong>Grootte: </strong>' + data.animals[i].size + '<br>' +
+					'<strong>Gewicht: </strong>' + data.animals[i].weight + '<br>' +
+					'<strong>Continenten: </strong>' + data.animals[i].rangeContinent + '<br>' +
+					'<br>'
 					)
 			} else {
 				console.log('chaoooos2')
@@ -95,11 +102,13 @@ $.get('/showall', function(artwork) {
 				'<strong>Kunstenaar: </strong>' + data.artist + '<br>' +
 				'<strong>Titel: </strong>' + data.title + '<br>' +
 				'<strong>Beschrijving: </strong>' + data.description + '<br>' +
+				'<strong>Plaatsingsdatum: </strong>' + data.dateSince + '<br>' +
+				'<strong>Materiaal: </strong>' + data.material + '<br>' +
 				'<img class="mapsimages" src="/images/database/' + data.image + '"><br>'
 
-				infowindow.setContent('<div class=infowindowdiv><h5>[KUNSTWERK]</h5>' + artContentString + 
-					'<strong>Dieren in dit kunstwerk: </strong>' + correspondingAnimals + '<br><br>' + 
-					'<h5>[DIEREN]</h5>' +	
+				infowindow.setContent('<div class=infowindowdiv><h5 class="center-align">[KUNSTWERK]</h5>' + artContentString + 
+					// '<strong>Dieren in dit kunstwerk: </strong>' + correspondingAnimals + '<br><br>' + 
+					'<h5 class="center-align">[DIEREN]</h5>' +	
 					animalContentString + '</div>')
 				infowindow.open(map, this);
 			})

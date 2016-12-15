@@ -3,18 +3,6 @@ const sass = require ('gulp-sass')
 const nodemon = require ('gulp-nodemon')
 
 
-// gulp.task('build-css', function(){
-//   return gulp.src('static/scss/styles.scss')
-//     .pipe(sass()) // Converts Sass to CSS with gulp-sass
-//     .pipe(gulp.dest('static/css'))
-// });
-
-// /* updated watch task to include sass */
-// gulp.task('watch', function() {
-//   gulp.watch('static/scss/styles.scss', ['build-css']);
-// })
-
-
 gulp.task('sass', function(){
   return gulp.src('static/scss/styles.scss')
   .pipe(sass())
