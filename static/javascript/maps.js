@@ -43,26 +43,26 @@ map = new google.maps.Map(document.getElementById('map'), {
 var infowindow = new google.maps.InfoWindow() 
 
 $.get('/showall', function(artwork) {
-	$.each(artwork, function(key, data) {
-		console.log(artwork)
+	for (var q = 0; q < artwork.length; q++) {
+		console.log(artwork[q])
 		console.log('----------')
-		console.log(data.title)
+		console.log(artwork[q].title)
 		//debugging
-		if (data.animal.length == 0) {
+		if (artwork[q].animals.length == 0) {
 			alert('chaooooos')
 		}
-		console.log(data.animal.length)
+		console.log(artwork[q].animals.length)
 		//shows all artworks have animals
 
 
 		//adding artwork information to infowwindow
-		var artLatLng = new google.maps.LatLng(data.lat, data.lng)
+		var artLatLng = new google.maps.LatLng(artwork[q].lat, artwork[q].lng)
 		var markerIcon = '/images/testgoogleicon2.png'
 		//Creating a marker and putting it on the map. 
 		var marker = new google.maps.Marker({
 			position: artLatLng,
 			map: map,
-			title: data.title,
+			title: artwork[q].title,
 			icon: markerIcon
 		})
 
@@ -71,16 +71,16 @@ $.get('/showall', function(artwork) {
 		var correspondingAnimals = ''
 
 		//One way: maar: is het niet al een loop? (each artwork)
-		for (var i = 0; i < data.animals.length; i++) {
-			debugger
-			if (data.animals[i].length !== 0) {
-				console.log('I console the animal: ' + data.animals[i].name)
+		for (var i = 0; i < artwork[q].animals.length; i++) {
+			// debugger
+			if (artwork[q].animals[i].length !== 0) {
+				console.log('I console the animal: ' + artwork[q].animals[i].name)
 				//adding info about the animals in the artworks
-				correspondingAnimals = correspondingAnimals + data.animals[i].name + ', '
+				correspondingAnimals = correspondingAnimals + artwork[q].animals[i].name + ', '
 
 				animalContentString = animalContentString + (
-					'<strong>Naam: </strong>' + data.animals[i].name + '<br>' +
-					'<strong>Beschrijving: </strong>' + data.animals[i].description + '<br><br>'
+					'<strong>Naam: </strong>' + artwork[q].animals[i].name + '<br>' +
+					'<strong>Beschrijving: </strong>' + artwork[q].animals[i].description + '<br><br>'
 					)
 			} else {
 				console.log('chaoooos2')
@@ -92,10 +92,10 @@ $.get('/showall', function(artwork) {
 		google.maps.event.addListener(marker, 'click', function() {
 				//adding artwork information to infowwindow
 				var artContentString =
-				'<strong>Kunstenaar: </strong>' + data.artist + '<br>' +
-				'<strong>Titel: </strong>' + data.title + '<br>' +
-				'<strong>Beschrijving: </strong>' + data.description + '<br>' +
-				'<img class="mapsimages" src="/images/database/' + data.image + '.jpg"><br>'
+				'<strong>Kunstenaar: </strong>' + artwork[q].artist + '<br>' +
+				'<strong>Titel: </strong>' + artwork[q].title + '<br>' +
+				'<strong>Beschrijving: </strong>' + artwork[q].description + '<br>' +
+				'<img class="mapsimages" src="/images/artwork[q]base/' + artwork[q].image + '.jpg"><br>'
 
 				infowindow.setContent('<div class=infowindowdiv><h5>Kunstwerk</h5>' + artContentString + 
 					'<strong>Dieren in dit kunstwerk: </strong>' + correspondingAnimals + '<br><br>' + 
@@ -108,7 +108,7 @@ $.get('/showall', function(artwork) {
 			google.maps.event.addListener(map, 'click', function () {
 				infowindow.close();
 			})
-		})
+		} // END OF EACH
 })
 
 
