@@ -17,7 +17,7 @@ function linkArt( currentAnimal ) {
 		}
 	}).then( (arts) => {
 		console.log('The ' + currentAnimal.name + ' count: ' + arts.length)
-		for (var i = arts.length - 1; i >= 0; i--) {
+		for (let i = arts.length - 1; i >= 0; i--) {
 			arts[i].setAnimals(currentAnimal)
 		}
 	})
@@ -33,3 +33,15 @@ setTimeout(function(){
 	})
 
 }, 5000)
+
+function checkUnlinked() {
+	db.Art.findAll({
+		include: [db.Animal]
+	}).then( arts => {
+		for (let i = arts.length - 1; i >= 0; i--) {
+			if (arts[i].animals.length == 0) {
+				console.log(arts[i])
+			}
+		}
+	})
+}

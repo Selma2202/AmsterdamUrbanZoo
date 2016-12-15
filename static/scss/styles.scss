@@ -9,11 +9,11 @@ $footerheader: #00ACC1;
 
 // // Formcolours
 $formInputText: #212121;
-$formInputTextWhenClicked: #FFA000;
-$formUnderlineWhenClicked: #FFA000;
-$formUnderlineWhenClickedShadow: #FEC006;
-$formUnderlineWhenValid: #028bca;
-$formUnderlineWhenValidShadow: #03a9f4;
+$formInputTextWhenClicked: #00838F;
+$formUnderlineWhenClicked: #00838F;
+$formUnderlineWhenClickedShadow: #00ACC1;
+$formUnderlineWhenValid: #00695C;
+$formUnderlineWhenValidShadow: #00796B;
 $formUnderlineWhenInvalid: #ca0202;
 $formUnderlineWhenInvalidShadow: #f20202;
 
@@ -85,9 +85,13 @@ footer.page-footer {
 	background-color: $footerheader;
 }
 
-// nav ul li a {
-// 	color: $body-color;
-// }
+footer ul li a {
+	color: $backgroundcolor;
+}
+
+ul li a {
+	color: $footerheader;
+}
 
 
 
@@ -97,7 +101,7 @@ footer.page-footer {
 // }
 
 .btn {
-	background-color:$formUnderlineWhenValid;
+	background-color:$formUnderlineWhenClicked;
 }
 
 .btn:hover {

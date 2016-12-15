@@ -48,10 +48,10 @@ $.get('/showall', function(artwork) {
 		console.log('----------')
 		console.log(data.title)
 		//debugging
-		if (data.animal.length == 0) {
-			alert('chaooooos')
+		if (data.animals.length == 0) {
+			// alert('chaooooos')
 		}
-		console.log(data.animal.length)
+		console.log(data.animals.length)
 		//shows all artworks have animals
 
 
@@ -72,7 +72,7 @@ $.get('/showall', function(artwork) {
 
 		//One way: maar: is het niet al een loop? (each artwork)
 		for (var i = 0; i < data.animals.length; i++) {
-			debugger
+			// debugger
 			if (data.animals[i].length !== 0) {
 				console.log('I console the animal: ' + data.animals[i].name)
 				//adding info about the animals in the artworks
@@ -95,11 +95,11 @@ $.get('/showall', function(artwork) {
 				'<strong>Kunstenaar: </strong>' + data.artist + '<br>' +
 				'<strong>Titel: </strong>' + data.title + '<br>' +
 				'<strong>Beschrijving: </strong>' + data.description + '<br>' +
-				'<img class="mapsimages" src="/images/database/' + data.image + '.jpg"><br>'
+				'<img class="mapsimages" src="/images/database/' + data.image + '"><br>'
 
-				infowindow.setContent('<div class=infowindowdiv><h5>Kunstwerk</h5>' + artContentString + 
+				infowindow.setContent('<div class=infowindowdiv><h5>[KUNSTWERK]</h5>' + artContentString + 
 					'<strong>Dieren in dit kunstwerk: </strong>' + correspondingAnimals + '<br><br>' + 
-					'<h5>Dieren</h5>' +	
+					'<h5>[DIEREN]</h5>' +	
 					animalContentString + '</div>')
 				infowindow.open(map, this);
 			})

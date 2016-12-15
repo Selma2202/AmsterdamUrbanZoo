@@ -1,0 +1,30 @@
+html
+	head
+		include includes/header.pug
+	body
+		div.container
+			if (currentArt === null)
+				h2 Bad admin!!
+				p 
+					| Admin, you are trying to edit an artwork without providing an ID. Go back to 
+					a(href='adm-listart') all artwork  
+					| to select a specific artwork.
+
+				h5 We're not really sorry about this, because you're the admin, and you are supposed to know this kind of stuff! 
+				p 
+					| You could very well say we're 
+					em disappointed 
+					|in you.
+
+			else
+				h2 Edit artwork
+				h5= message
+		
+				p This page is still under construction, to edit a single artwork.
+				p You clicked on the artwork: 
+					strong #{currentArt.title}
+
+
+
+		main
+		include includes/footer.pug
