@@ -17,9 +17,9 @@ function fileParser (filename, callback){
 //deze twee importers nog scheiden, voor als ik maar één ding toe te voegen heb?
 //import a json of artworks into the database (note: this adds, this does not replace)
 setTimeout(function(){
-  console.log('Starting Import')
-  fileParser( __dirname + '/../json/allekunst-incopleet.json', function(data) {
-    console.log('Start Art import')
+  console.log('\n\nStarting Import\n\n')
+  fileParser( __dirname + '/../json/allekunst-incompleet.json', function(data) {
+    console.log('\n\nStart Art import\n\n')
     for (var i = 0; i < data.length; i++) {
       db.Art.create({
         artist: data[i].artist,
@@ -38,7 +38,7 @@ setTimeout(function(){
 
   //import a json of animals into the database (note: this adds, this does not replace)
   fileParser( __dirname + '/../json/alledieren-incompleet.json', function(data) {
-    console.log('Start animal import')
+    console.log('\n\nStart animal import\n\n')
     for (var i = 0; i < data.length; i++) {
 
       console.log(

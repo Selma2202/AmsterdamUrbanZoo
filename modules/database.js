@@ -23,7 +23,7 @@ db.Art = db.conn.define ('art', {
 	artist: sequelize.STRING,
 	title: sequelize.STRING,
 	description: sequelize.TEXT,
-	dateSince: sequelize.STRING, //Of als integer doen? ligt er aan of ik alleen jaartallen doe
+	dateSince: sequelize.STRING, 
 	material: sequelize.STRING,
 	image: sequelize.STRING,
 	lat: sequelize.STRING,

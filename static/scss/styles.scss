@@ -1,66 +1,108 @@
-// $main-color: #FEC006; 
-// $secondary-color: #FFA000;
+/*p {
+	color: blue;
+	}*/
+
+
+$backgroundcolor: #E0F7FA; 
+$footerheader: #00ACC1; 
 // $body-color: #FAFAFA;
 
 // // Formcolours
-// $formInputText: #212121;
-// $formInputTextWhenClicked: #FFA000;
-// $formUnderlineWhenClicked: #FFA000;
-// $formUnderlineWhenClickedShadow: #FEC006;
-// $formUnderlineWhenValid: #028bca;
-// $formUnderlineWhenValidShadow: #03a9f4;
-// $formUnderlineWhenInvalid: #ca0202;
-// $formUnderlineWhenInvalidShadow: #f20202;
+$formInputText: #212121;
+$formInputTextWhenClicked: #FFA000;
+$formUnderlineWhenClicked: #FFA000;
+$formUnderlineWhenClickedShadow: #FEC006;
+$formUnderlineWhenValid: #028bca;
+$formUnderlineWhenValidShadow: #03a9f4;
+$formUnderlineWhenInvalid: #ca0202;
+$formUnderlineWhenInvalidShadow: #f20202;
 
 
-// $index-font: "Canter-Bold";
+$index-font: "saxmono";
 // $secondary-font: "Canter-Bold2";
 
-// @font-face {
-//     font-family: "Canter-Bold";
-//     src: url(../fonts/Canter-Bold-Shadow.otf);
-// }
+@font-face {
+	font-family: "saxmono";
+	src: url(../fonts/saxmono.ttf);
+}
 
-// @font-face {
-//     font-family: "Canter-Bold2";
-//     src: url(../fonts/CanterBold.otf);
-// }
+@font-face {
+	font-family: "spacemono";
+	src: url(../fonts/SpaceMono-regular.ttf);
+}
 
-// .nav-wrapper {
-// 	background-color: $main-color;
-// }
+h1, h2, h5 {
+	font-family: $index-font;
+}
 
-// footer.page-footer {
-// 	background-color: #03A9F4;
-// }
+body {
+	background-color: $backgroundcolor;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+h1 {
+	margin-top: -4px;
+}
+
+.adminput {
+	margin-left: 40px;
+}
+
+#map {
+	width: 100%;
+	height: 97%;
+	background-color: $backgroundcolor;
+	margin-top: 8px;
+	/*margin-bottom: -30px;*/
+	/*	margin-top: 3%;*/
+}
+
+.mapsimages {
+	width: 50%;
+	display: block;
+	margin: 10px auto;
+}
+
+.greyheading {
+	color: darkgrey;
+}
+
+.infowindowdiv {
+	/*border: 5px solid blue;*/
+}
+
+.nav-wrapper {
+	background-color: $footerheader;
+}
+
+footer.page-footer {
+	background-color: $footerheader;
+}
 
 // nav ul li a {
 // 	color: $body-color;
 // }
 
-// body {
-// 	display: flex;
-//     min-height: 100vh;
-//     flex-direction: column;
-//     background-color: $body-color; 
-// }
 
-// main {
-// 	flex: 1 0 auto;
-// }
 
 // input[type=submit] {
 // 	position: relative;
 // 	transform: translateY(35%);
 // }
 
-// .btn {
-// 	background-color:$formUnderlineWhenValid;
-// }
- 
-// .btn:hover {
-// 	background-color:$formUnderlineWhenClickedShadow;
-// }
+.btn {
+	background-color:$formUnderlineWhenValid;
+}
+
+.btn:hover {
+	background-color:$formUnderlineWhenClickedShadow;
+}
 
 // @media all and (min-width: 960px) {
 // 	.main-title{
@@ -125,15 +167,6 @@
 // }
 
 
-// .container-mainbox {
-// 	background-color: #03A9F4;
-// }
-
-// #indexMap {
-//     width: 85%;
-//     height:400px;
-//     margin: 0 auto;
-// }
 
 // #arrow {
 // 	width:70px;
@@ -148,125 +181,6 @@
 // 	font-weight: 200;
 // }
 
-// .barBG {
-// 	background-color:#757575;
-// 	height:200px;
-// 	width:100%;
-// 	margin-top: 5%;
-// 	position: relative;
-// }
-
-// .cat {
-// 	display: inline-block;
-// 	float: left;
-// 	width:1%;
-// 	height:150px;
-// 	margin-top: 2%;
-// 	background-image: url("/images/running-cat.gif");
-// 	background-size: 75px 75px;
-	
-// 	//for flipping the image
-// 	-moz-transform: scaleX(-1);
-//     -o-transform: scaleX(-1);
-//     -webkit-transform: scaleX(-1);
-//     transform: scaleX(-1);
-//     filter: FlipH;
-//     -ms-filter: "FlipH";
-// }
-
-// .cat:hover {
-// 	background-color: #8BC34A;
-// }
-
-// .dog {
-// 	display: inline-block;
-// 	float: right; 
-// 	width:1%;
-// 	background-color:#F44336;
-// 	height:150px;
-// 	margin-top: 2%;
-// 	background-image: url("/images/running-dog.gif");
-// 	background-size: 140px 140px;
-// }
-
-// .dog:hover {
-// 	background-color:#FF5252;
-// }
-
-// #map {
-// 	width: 100%;
-// 	height: 500px;
-// 	margin-top: 3%;
-// }
-
-// div#sidenav-overlay {
-// 	z-index: -50; 
-// } 
-
-// .highlighted {
-// 	background-color: yellow;
-// 	padding: 10px;
-// 	margin: 20px 20px;
-// 	p {
-// 		margin: 0px;
-// 	}
-// }
-
-// .profifo {
-// 	// display: block;
-// 	width: 35%;
-// 	// margin: auto;
-// 	padding-top: 1%;
-// 	padding-bottom: 20px
-// }
-
-// .first-row {
-// 	background-color:#F5F5F5;
-// }
-
-// .second-row {
-// 	margin-top:10%;
-// 	background-color:#F5F5F5;
-// }
-
-// .third-row {
-// 	margin-top:10%;
-// 	margin-bottom:10%;
-// 	background-color:#F5F5F5;
-// }
-
-// .profinfo li {
-// 	margin-top:5%;
-// }
-
-// .title {
-// 	padding-bottom:5%;
-// }
-// .bulbright {
-// 	float: right;
-// }
-
-// .editbg {
-// 	background-color: #E0E0E0;
-// 	margin: 6% 0% 3% 0%; 
-// }
-
-// .bulbleft {
-// 	float: left; 
-// } 
-
-// tr{
-// 	td{
-// 		#markRow {
-// 			background-color: pink;
-// 		}
-// 	}
-// }
-
-// .profileIndent {
-//     margin-left: 20px;
-//     margin-bottom: 25px;
-// }
 
 // .buttonholder {
 // 	text-align: center;
@@ -277,7 +191,7 @@
 // /* label color */
 // .input-field {
 // 	margin-top: 0rem;
-	
+
 // 	label {
 // 		color: $formInputText;
 // 	}
@@ -287,168 +201,103 @@
 // 	margin-top:4%;
 // }
 
-// .red-icon {
-// 	background-image: url(../images/red-dot.png);
-// 	background-repeat: no-repeat; 
-// 	background-position: center center;
-// 	background-size: 40px;
-// 	vertical-align: middle; 
-// 	border: 1px solid #d4d4d4; 
-// }
 
-// .green-icon {
-// 	background-image: url(../images/green-dot.png);
-// 	background-repeat: no-repeat; 
-// 	background-position: center center;
-// 	background-size: 20px;
-// 	vertical-align: middle; 
-// 	border: 1px solid #d4d4d4; 
-// }
-
-// .loc-icon {
-// 	background-image: url(../images/location-marker.png);
-// 	background-repeat: no-repeat; 
-// 	background-position: center center;
-// 	vertical-align: middle; 
-// 	border: 1px solid #d4d4d4; 
-// }
-
-// // For text forms
-// /* label focus color */
-// .input-field input[type=text]:focus + label {
-// 	color: $formInputTextWhenClicked;
-// }
-// /* label underline focus color */
-// .input-field input[type=text]:focus {
-// 	border-bottom: 1px solid $formUnderlineWhenClicked;
-// 	box-shadow: 0 1px 0 0 $formUnderlineWhenClickedShadow;
-// }
-// /* valid color */
-// .input-field input[type=text].valid {
-// 	border-bottom: 1px solid $formUnderlineWhenValid;
-// 	box-shadow: 0 1px 0 0 $formUnderlineWhenValidShadow;
-// }
-// /* invalid color */
-// .input-field input[type=text].invalid {
-// 	border-bottom: 1px solid $formUnderlineWhenInvalid;
-// 	box-shadow: 0 1px 0 0 $formUnderlineWhenInvalidShadow;
-// }
+// For text forms
+/* label focus color */
+.input-field input[type=text]:focus + label {
+	color: $formInputTextWhenClicked;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+	border-bottom: 1px solid $formUnderlineWhenClicked;
+	box-shadow: 0 1px 0 0 $formUnderlineWhenClickedShadow;
+}
+/* valid color */
+.input-field input[type=text].valid {
+	border-bottom: 1px solid $formUnderlineWhenValid;
+	box-shadow: 0 1px 0 0 $formUnderlineWhenValidShadow;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+	border-bottom: 1px solid $formUnderlineWhenInvalid;
+	box-shadow: 0 1px 0 0 $formUnderlineWhenInvalidShadow;
+}
 
 
-// // for password forms
-// /* label focus color */
-// .input-field input[type=password]:focus + label {
-// 	color: $formInputTextWhenClicked;
-// }
-// /* label underline focus color */
-// .input-field input[type=password]:focus {
-// 	border-bottom: 1px solid $formUnderlineWhenClicked;
-// 	box-shadow: 0 1px 0 0 $formUnderlineWhenClickedShadow;
-// }
-// /* valid color */
-// .input-field input[type=password].valid {
-// 	border-bottom: 1px solid $formUnderlineWhenValid;
-// 	box-shadow: 0 1px 0 0 $formUnderlineWhenValidShadow;
-// }
-// /* invalid color */
-// .input-field input[type=password].invalid {
-// 	border-bottom: 1px solid $formUnderlineWhenInvalid;
-// 	box-shadow: 0 1px 0 0 $formUnderlineWhenInvalidShadow;
-// }
+// for password forms
+/* label focus color */
+.input-field input[type=password]:focus + label {
+	color: $formInputTextWhenClicked;
+}
+/* label underline focus color */
+.input-field input[type=password]:focus {
+	border-bottom: 1px solid $formUnderlineWhenClicked;
+	box-shadow: 0 1px 0 0 $formUnderlineWhenClickedShadow;
+}
+/* valid color */
+.input-field input[type=password].valid {
+	border-bottom: 1px solid $formUnderlineWhenValid;
+	box-shadow: 0 1px 0 0 $formUnderlineWhenValidShadow;
+}
+/* invalid color */
+.input-field input[type=password].invalid {
+	border-bottom: 1px solid $formUnderlineWhenInvalid;
+	box-shadow: 0 1px 0 0 $formUnderlineWhenInvalidShadow;
+}
 
 
 
-// // for email forms
-// /* label focus color */
-// .input-field input[type=email]:focus + label {
-// 	color: $formInputTextWhenClicked;
-// }
-// /* label underline focus color */
-// .input-field input[type=email]:focus {
-// 	border-bottom: 1px solid $formUnderlineWhenClicked;
-// 	box-shadow: 0 1px 0 0 $formUnderlineWhenClickedShadow;
-// }
-// /* valid color */
-// .input-field input[type=email].valid {
-// 	border-bottom: 1px solid $formUnderlineWhenValid;
-// 	box-shadow: 0 1px 0 0 $formUnderlineWhenValidShadow;
-// }
-// /* invalid color */
-// .input-field input[type=email].invalid {
-// 	border-bottom: 1px solid $formUnderlineWhenInvalid;
-// 	box-shadow: 0 1px 0 0 $formUnderlineWhenInvalidShadow;
-// }
+// for email forms
+/* label focus color */
+.input-field input[type=email]:focus + label {
+	color: $formInputTextWhenClicked;
+}
+/* label underline focus color */
+.input-field input[type=email]:focus {
+	border-bottom: 1px solid $formUnderlineWhenClicked;
+	box-shadow: 0 1px 0 0 $formUnderlineWhenClickedShadow;
+}
+/* valid color */
+.input-field input[type=email].valid {
+	border-bottom: 1px solid $formUnderlineWhenValid;
+	box-shadow: 0 1px 0 0 $formUnderlineWhenValidShadow;
+}
+/* invalid color */
+.input-field input[type=email].invalid {
+	border-bottom: 1px solid $formUnderlineWhenInvalid;
+	box-shadow: 0 1px 0 0 $formUnderlineWhenInvalidShadow;
+}
 
-//    // for radio forms
-//    /* label focus color */
-//    .input-field input[type=radio]:focus + label {
-//    	color: $formInputTextWhenClicked;
-//    }
-//    /* label underline focus color */
-//    .input-field input[type=radio]:focus {
-//    	border-bottom: 1px solid $formUnderlineWhenClicked;
-//    	box-shadow: 0 1px 0 0 $formUnderlineWhenClickedShadow;
-//    }
-//    /* valid color */
-//    .input-field input[type=radio].valid {
-//    	border-bottom: 1px solid $formUnderlineWhenValid;
-//    	box-shadow: 0 1px 0 0 $formUnderlineWhenValidShadow;
-//    }
-//    /* invalid color */
-//    .input-field input[type=radio].invalid {
-//    	border-bottom: 1px solid $formUnderlineWhenInvalid;
-//    	box-shadow: 0 1px 0 0 $formUnderlineWhenInvalidShadow;
-//    }
+   // for radio forms
+   /* label focus color */
+   .input-field input[type=radio]:focus + label {
+   	color: $formInputTextWhenClicked;
+   }
+   /* label underline focus color */
+   .input-field input[type=radio]:focus {
+   	border-bottom: 1px solid $formUnderlineWhenClicked;
+   	box-shadow: 0 1px 0 0 $formUnderlineWhenClickedShadow;
+   }
+   /* valid color */
+   .input-field input[type=radio].valid {
+   	border-bottom: 1px solid $formUnderlineWhenValid;
+   	box-shadow: 0 1px 0 0 $formUnderlineWhenValidShadow;
+   }
+   /* invalid color */
+   .input-field input[type=radio].invalid {
+   	border-bottom: 1px solid $formUnderlineWhenInvalid;
+   	box-shadow: 0 1px 0 0 $formUnderlineWhenInvalidShadow;
+   }
 
-//    [type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after {
-//    	background-color: $formUnderlineWhenValidShadow
-//    }
+   [type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after {
+   	background-color: $formUnderlineWhenValidShadow
+   }
 
-//    [type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before, [type="radio"].with-gap:checked+label:after {
-//    	border: 2px solid $formUnderlineWhenValid
-//    }
+   [type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before, [type="radio"].with-gap:checked+label:after {
+   	border: 2px solid $formUnderlineWhenValid
+   }
 
-// // for date forms
-// /* label focus color */
-// .input-field input[type=date]:focus + label {
-// 	color: $formInputTextWhenClicked;
-// }
-// /* label underline focus color */
-// .input-field input[type=date]:focus {
-// 	border-bottom: 1px solid $formUnderlineWhenClicked;
-// 	box-shadow: 0 1px 0 0 $formUnderlineWhenClickedShadow;
-// }
-// /* valid color */
-// .input-field input[type=date].valid {
-// 	border-bottom: 1px solid $formUnderlineWhenValid;
-// 	box-shadow: 0 1px 0 0 $formUnderlineWhenValidShadow;
-// }
-// /* invalid color */
-// .input-field input[type=date].invalid {
-// 	border-bottom: 1px solid $formUnderlineWhenInvalid;
-// 	box-shadow: 0 1px 0 0 $formUnderlineWhenInvalidShadow;
-// }
 
-//  // for number forms
-//  /* label focus color */
-//  .input-field input[type=number]:focus + label {
-//  	color: $formInputTextWhenClicked;
-//  }
-//  /* label underline focus color */
-//  .input-field input[type=number]:focus {
-//  	border-bottom: 1px solid $formUnderlineWhenClicked;
-//  	box-shadow: 0 1px 0 0 $formUnderlineWhenClickedShadow;
-//  }
-//  /* valid color */
-//  .input-field input[type=number].valid {
-//  	border-bottom: 1px solid $formUnderlineWhenValid;
-//  	box-shadow: 0 1px 0 0 $formUnderlineWhenValidShadow;
-//  }
-//  /* invalid color */
-//  .input-field input[type=number].invalid {
-//  	border-bottom: 1px solid $formUnderlineWhenInvalid;
-//  	box-shadow: 0 1px 0 0 $formUnderlineWhenInvalidShadow;
-//  }
 
 //  /* icon prefix focus color */
 //  .input-field .prefix.active {

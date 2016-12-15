@@ -16,55 +16,47 @@ const router = express.Router ( )
 
 
 router.get('/index', function (req, res) {
-	var message = req.query.message;
-// 	fs.writeFile (__dirname + '/../static/json/artworks.json', 'does this work', 'utf-8', function(error) { //JSON.stringify (mapArtworks)
+// db.Art.findAll({
+// 	include: [{
+// 		model: db.Animal
+// 	}]
+// })
+// .then( (artworks) =>{
+// 	let artArray = []
+// 	for (var i = artworks.length - 1; i >= 0; i--) {
+// 		artArray.push(artworks[i])
+// 	}
+// 	return artArray
+// })
+// .then( (mapArtworks) => {
+// 	fs.writeFile (__dirname + '/../static/json/artworks.json', JSON.stringify (mapArtworks), 'utf-8', function(error) { 
 // 		if(error) throw error
 // 			console.log(error)
 // 		console.log("it's saved!")
-		
-
 // 	})
-// 	res.render('index', {message: message})
-
 // })
+// .then ( () => {
+	console.log('index page is now showing in the browser')
+	res.render('index')
+})
+// });
 
 
-
-
-
+router.get('/showall', (req, res)=> {
 	db.Art.findAll({
 		include: [{
 			model: db.Animal
 		}]
-	})
-	.then( (artworks) =>{
-		let artArray = []
-		for (var i = artworks.length - 1; i >= 0; i--) {
-			artArray.push(artworks[i])
+	}).then( ( allArtworks ) => {
+		for (var i = 0; i < allArtworks.length; i++) {
+			console.log('The "animal"-string in artworks has this many characters: ' + allArtworks[i].animal.length)
 		}
-		// console.log ('##############################################')
-		// console.log (artArray)
-		return artArray
-	})
-	.then( (mapArtworks) => {
-		// console.log ('---------------------------------------')
-		// console.log (mapArtworks)
-		//mss niet eens nodig als ik met data werk uit csv dat een json zelf kan worden? of nog wel omdat ik de database moet gebruiken juist?
-		fs.writeFile (__dirname + '/../static/json/artworks.json', JSON.stringify (mapArtworks), 'utf-8', function(error) { 
-			if(error) throw error
-				console.log(error)
-			console.log("it's saved!")
-
-		})
-	})
-	.then ( () => {
-		console.log('index page is now showing in the browser')
-		res.render('index', {message: message})
+		res.send( allArtworks )
 	})
 
 
-
-});
+	// findall => res.send( allofthem )
+})
 
 //// Export
 module.exports = router
