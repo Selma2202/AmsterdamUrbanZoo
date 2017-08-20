@@ -74,8 +74,11 @@ $.get('/showall', function(artwork) {
 			// debugger
 			if (data.animals[i].length !== 0) {
 				console.log('I console the animal: ' + data.animals[i].name)
+				console.log('correspondingAnimals: ' + correspondingAnimals)
 				//adding info about the animals in the artworks
 				correspondingAnimals = correspondingAnimals + data.animals[i].name + ', '
+				console.log('correspondingAnimals: ' + correspondingAnimals)
+
 
 				animalContentString = animalContentString + (
 					'<strong>Naam: </strong>' + data.animals[i].name + '<br>' +

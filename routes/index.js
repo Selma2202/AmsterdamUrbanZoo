@@ -19,9 +19,8 @@ router.get('/index', function (req, res) {
 	console.log('index page is now showing in the browser')
 	res.render('index')
 })
-// });
 
-
+ 
 router.get('/showall', (req, res)=> {
 	db.Art.findAll({
 		include: [{
@@ -29,6 +28,7 @@ router.get('/showall', (req, res)=> {
 		}]
 	}).then( ( allArtworks ) => {
 		for (var i = 0; i < allArtworks.length; i++) {
+			console.log('This is the animal: ' + allArtworks[i].animal)
 			console.log('The "animal"-string in artworks has this many characters: ' + allArtworks[i].animal.length)
 		}
 		res.send( allArtworks )
