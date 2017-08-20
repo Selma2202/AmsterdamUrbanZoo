@@ -62,21 +62,22 @@ db.Animal.belongsToMany( db.Art, { through: 'animallink' } )
 //Create (sample) admin, sample art pieces, sample animals.
 db.conn.sync( {force: false}).then( () => {
 
+
+/////Deze testdata veroorzaakt een fout bij opstarten van de app, dus deze wordt even uitgecomment
 	//create admin
-	db.Admin.create( {
-		email: 'b',
-		password: 'b'
-	})
+	// db.Admin.create( {
+	// 	email: 'b',
+	// 	password: 'b'
+	// })
+	// bcrypt.hash('a', null, null, function(err, hash) {
+	// 	if (err) throw (err); 
 
-
-	bcrypt.hash('a', null, null, function(err, hash) {
-		if (err) throw (err); 
-
-		db.Admin.create( {
-			email: 'a',
-			password: hash
-		}) 
-	})
+	// 	db.Admin.create( {
+	// 		email: 'a',
+	// 		password: hash
+	// 	}) 
+	// })
+/////Einde uitgecommente testdata
 
 //TESTDATA
 	//create Art
